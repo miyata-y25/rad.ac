@@ -1,0 +1,245 @@
+@charset "utf-8";
+
+@use 'variable' as var;
+@use 'basic/mixin';
+
+/*==================================================================================================
+	共通 Common
+==================================================================================================*/
+
+//電話番号のリンク（PC時はリンク無効）
+.telLink {
+  cursor: default;
+  pointer-events: none;
+  text-decoration: none;
+  _:-ms-fullscreen,
+  :root .selector {
+    display: inline-block;
+  }
+  @include mixin.max-screen(var.$screen-md) {
+    pointer-events: auto;
+    letter-spacing: 0.02em;
+  }
+}
+
+//pc・spでの表示切替
+.spShow {
+  display: none;
+  @include mixin.max-screen(var.$screen-md) {
+    display: block;
+  }
+}
+.pcShow {
+  @include mixin.max-screen(var.$screen-md) {
+    display: none;
+  }
+}
+
+//テキストの微調整
+.indentText {
+  text-indent: -1em;
+  padding-left: 1em;
+}
+.smallText {
+  font-size: 70%;
+}
+.bigText {
+  font-size: 112%;
+}
+.yellowMarker {
+  display: inline;
+  background: linear-gradient(transparent 60%, var.$yellow 0%);
+}
+.grayMarker {
+  display: inline;
+  background: linear-gradient(transparent 60%, #c8cdd4 0%);
+}
+.-strong {
+  font-weight: bold;
+}
+.-blue {
+  color: var.$blue;
+}
+.-yellow {
+  color: var.$yellow;
+}
+.-center {
+  text-align: center;
+}
+.-right {
+  text-align: right;
+}
+.-left {
+  text-align: left;
+}
+.-en {
+  font-family: var.$en-font;
+}
+.-num {
+  font-family: var.$en-font;
+}
+.-spLeft {
+  @include mixin.max-screen(var.$screen-sm) {
+    text-align: left;
+  }
+}
+.-spNoBr {
+  @include mixin.max-screen(var.$screen-sm) {
+    br {
+      display: none;
+    }
+  }
+}
+
+.-displayNone {
+  display: none !important;
+}
+.mb0 {
+  margin-bottom: 0 !important;
+}
+.mt0 {
+  margin-top: 0 !important;
+}
+.mtSmall {
+  margin-top: clamp(30px, 6vw, 50px) !important;
+}
+.mtMedium {
+  margin-top: clamp(3em, 8vw, 5em) !important;
+}
+.mtBig {
+  margin-top: clamp(5em, 12vw, 7em) !important;
+}
+
+/*---------------------------------------------------------------------
+コンテナ
+---------------------------------------------------------------------*/
+
+.lContainer {
+  position: relative;
+}
+
+.mContainer {
+  padding: 6em 0;
+  &.-bgBeige {
+    background: var.$base;
+  }
+  @include mixin.max-screen(var.$screen-md) {
+    padding: 5em 0;
+  }
+  @include mixin.max-screen(var.$screen-xs) {
+    padding: 4em 0;
+  }
+  .sContainer {
+    margin-top: 6em;
+    &:first-child {
+      margin-top: 0;
+    }
+    @include mixin.max-screen(var.$screen-md) {
+      margin-top: 4em;
+    }
+    @include mixin.max-screen(var.$screen-xs) {
+      margin-top: 3.5em;
+    }
+  }
+}
+
+/*---------------------------------------------------------------------
+パンくずリスト
+---------------------------------------------------------------------*/
+
+
+/*---------------------------------------------------------------------
+見出し
+---------------------------------------------------------------------*/
+
+.topLabel{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  padding-bottom: 2em;
+  margin-bottom: 1.5em;
+  position: relative;
+  color: var.$navy;
+  &:after{
+    content: "";
+    width: 7.5em;
+    height: 1px;
+    background: var.$navy;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateY(0) translateX(-50%);
+  }
+  .en{
+    font-size: clamp(1.6rem,3vw,137.5%);
+    font-family: var.$en-font;
+    line-height: 1;
+  }
+  .jp{
+    font-size: clamp(2.4rem,7.5vw,350%);
+    line-height: 1.2;
+    font-weight: 700;
+  }
+  &.-left{
+    align-items: flex-start;
+    &:after{
+      left: 0;
+      transform: none;
+    }
+  }
+}
+
+/*---------------------------------------------------------------------
+ボタン
+---------------------------------------------------------------------*/
+
+.btnArea{
+  margin-top: 2em;
+  .basicBtn{
+    background: var.$navy;
+    color: #FFF;
+    text-align: left;
+    padding: 1.4em 4.4em 1.4em 2em;
+    border-radius: 5em;
+    position: relative;
+    text-decoration: none;
+    line-height: 1.6;
+    display: block;
+    max-width: 375px;
+    &:hover{
+      background: lighten(var.$navy, 10%);
+    }
+    &:after{
+      content: "";
+      width: 3.1em;
+      height: 3.1em;
+      background: url("../img/common/icon-arrow-circle.svg") no-repeat;
+      background-position: center;
+      background-size: contain;
+      filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(292deg) brightness(113%) contrast(101%);
+      position: absolute;
+      right: 1em;
+      top: 50%;
+      margin-top: -1.55em;
+    }
+    &.-center{
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &.-pink{
+      background: var.$beauty2;
+      &:hover{
+        background: lighten(var.$beauty2, 10%);
+      }
+    }
+    &.-brown{
+      background: var.$brown-text;
+      &:hover{
+        background: lighten(var.$brown-text, 10%);
+      }
+    }
+  }
+
+
+}

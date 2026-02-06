@@ -1,0 +1,352 @@
+@charset "utf-8";
+
+@use "variable" as var;
+@use "basic/mixin";
+
+/*----------------------------------------------------
+投稿編集画面のカスタマイズ
+-----------------------------------------------------*/
+
+.editor-visual-editor{
+  background-color: #FFF;
+}
+
+.block-editor-iframe ,.editor-styles-wrapper {
+  .wp-block{
+    max-width: 800px !important;
+  }
+  &__body , &.block-editor-writing-flow {
+    //入力エリア内側の定義
+    font-family: var.$default-font;
+    width: auto;
+    height: auto !important;
+    width: 96%;
+    background-color: #FFF;
+    margin: 20px auto;
+    max-width: 100% !important;
+    padding: 25px 5vw;
+
+    .wp-block-post-title{
+      max-width: 800px !important;
+    }
+
+    .is-root-container{
+      max-width: 800px !important;
+      & > *{
+        max-width: 100% !important;
+      }
+    }
+
+    .alignleft ,.alignright{
+      clear: both;
+      :after {
+        content: " ";
+        display: block;
+        clear: both;
+      }
+    }
+
+    .wp-block-image{
+      clear: both;
+      &:after {
+        content: " ";
+        display: block;
+        clear: both;
+      }
+      *{
+        :after {
+          content: " ";
+          display: block;
+          clear: both;
+        }
+      }
+    }
+
+    h1,h2,h3,h4,h5,h6 ,p ,ul,li,ol,span,table,th,td{
+      font-family: var.$default-font;
+    }
+
+    .edit-post-visual-editor__post-title-wrapper{
+      padding-bottom: 1em;
+      border-bottom: var.$line 1px solid;
+      .editor-post-title{ //メインタイトルの定義
+        font-size: 260%;
+        font-weight: bold;
+        font-family: var.$default-font;
+      }
+    }
+    
+    //テキスト
+    .block-editor-rich-text__editable{
+      &.wp-block-paragraph{
+        font-size: 90%;
+      }
+      a{
+        text-decoration: underline;
+        color: var.$blue;
+      }
+    }
+
+    //タイトル系の定義
+    h1,h2,h3,h4,h5,h6{
+      margin-top: 2em;
+      margin-bottom: 1em;
+      font-weight: 500;
+      width: 100%;
+    }
+    h1 {
+      font-size: 240%;
+      font-family: var.$label-font;
+    }
+    h2{
+      color: var.$text;
+      font-size: 180%;
+      margin-top: 2em;
+      margin-bottom: 1em;
+      font-family: var.$label-font;
+    }
+    h3{
+      font-size: 146%;
+      margin-top: 2em;
+      margin-bottom: 1em;
+      padding-bottom: 0.6em;
+      color: var.$text;
+      border-bottom: var.$text 1px solid;
+      font-family: var.$label-font;
+    }
+    h4 {
+      font-size: 130%;
+      padding-left: 0.7em;
+      border-left: 6px solid var.$blue;
+      font-family: var.$label-font;
+    }
+    h5{
+      color: var.$blue;
+      font-size: 115%;
+    }
+    h6{
+      font-size: 115%;
+    }
+
+    //ボタン
+    .wp-block-buttons{
+      margin: 1em 0;
+      .wp-block-button{
+        &__link{
+          text-decoration: none;
+          border-radius: 0.3em;
+          padding: 0.8em 2em;
+          font-family: var.$default-font;
+          pointer-events: none;
+        }
+        &.is-style-fill{
+          .wp-block-button__link{
+            color: #FFF !important;
+            background: var.$text;
+          }
+        }
+        &.is-style-outline{
+  
+        }
+      }
+    }
+
+    //リストの定義
+    ul{
+      list-style: none;
+      margin: 1em 0;
+      list-style: disc;
+      padding: 0;
+      li{
+        margin: 0;
+        padding: 0;
+        margin-left: 1.5em;
+        margin-bottom: 0.3em;
+        font-size: 90%;
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+    ol{
+      list-style: none;
+      margin: 1em 0;
+      padding: 0;
+      list-style: decimal;
+      li{
+        margin: 0;
+        padding: 0;
+        margin-bottom: 0.3em;
+        margin-left: 1.5em;
+        font-size: 90%;
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    //テーブルの定義
+    .wp-block-table {
+      width: 100%;
+      max-width: 900px;
+      table{
+        margin: 0.5em 0 1em;
+        max-width: 100%!important;
+        min-width: 360px;
+        font-size: 90%;
+        font-family: var.$default-font;
+        @include mixin.max-screen(var.$screen-tb){
+          min-width: 240px;
+          width: 100%!important;
+          table-layout: auto!important;
+        }
+        th{
+          background: var.$line;
+          padding: 0.8em 1em;
+          line-height: 1.4;
+          font-weight: bold;
+          min-width: 80px;
+          border: var.$line solid 1px;
+          word-break: break-all;
+          font-family: var.$default-font;
+        }
+        td{
+          padding: 0.8em 1.5em 0.8em 1em;
+          line-height: 1.4;
+          border: var.$line solid 1px;
+          word-break: break-all;
+        }
+      }
+    }
+
+    /*---------------- カラーパレット ----------------*/
+    //black
+    .has-black-background-color {
+      background-color: #292220;
+    }
+    .has-black-color {
+      color: #292220;
+    }
+    //white
+    .has-white-background-color {
+      background-color: #FFFFFF;
+    }
+    .has-white-color {
+      color: #FFFFFF;
+    }
+
+    //darkgray
+    .has-gray-background-color {
+      background-color: #BBB2B4;
+    }
+    .has-gray-color {
+      color: #BBB2B4;
+    }
+
+    .has-brown-background-color {
+      background-color: #654B3D;
+    }
+    .has-brown-color {
+      color: #654B3D;
+    }
+    .has-lightbrown-background-color {
+      background-color: #DDD2C8;
+    }
+    .has-lightbrown-color {
+      color: #DDD2C8;
+    }
+
+    //orange
+    .has-orange-background-color {
+      background-color: #BA6A3F;
+    }
+    .has-orange-color {
+      color: #BA6A3F;
+    }
+
+    //red
+    .has-red-background-color {
+      background-color: #ff094c;
+    }
+    .has-red-color {
+      color: #ff094c;
+    }
+
+    //blue
+    .has-blue-background-color {
+      background-color: #3F6CBA;
+    }
+    .has-blue-color {
+      color: #3F6CBA;
+    }
+    .has-lightblue-background-color {
+      background-color: #4492D6;
+    }
+    .has-lightblue-color {
+      color: #4492D6;
+    }
+
+    //line
+    .has-line-background-color {
+      background-color: #06c755;
+    }
+    .has-line-color {
+      color: #06c755;
+    }
+
+    //yellow
+    .has-yellow-background-color {
+      background-color: #ffff75;
+    }
+    .has-yellow-color {
+      color: #ffff75;
+    }
+    .has-yellow2-background-color {
+      background-color: #ffefda;
+    }
+    .has-yellow-2-color {
+      color: #ffefda;
+    }
+
+  }
+}
+
+.wp-block {
+  max-width: 900px;
+}
+
+.wp-block-image { //imgを囲うボックス
+    .components-resizable-box__container {
+     height: auto !important; //画像をリサイズしたときに必要
+    max-width: 100% !important; //画像をリサイズしたときに必要
+    }
+   img { //imgの定義
+   
+  }
+}
+
+
+
+.edit-post-visual-editor{
+  background: #FFF;
+}
+.edit-post-visual-editor__post-title-wrapper .editor-post-title {
+  margin: 0 auto; //メインタイトル周りの余白の定義
+}
+
+
+//classicエディター
+.mce-edit-area{
+  iframe{
+    body{
+      font-family: var.$default-font;
+      font-size: 100%;
+      color: var.$text;
+      background: #FFF;
+      width: auto;
+      height: auto !important;
+      width: 100%;
+    }
+  }
+
+}

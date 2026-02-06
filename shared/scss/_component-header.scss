@@ -1,0 +1,371 @@
+@charset "utf-8";
+
+@use 'variable' as var;
+@use 'basic/mixin';
+
+/*==================================================================================================
+	ヘッダー
+==================================================================================================*/
+
+header{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 1000;
+  padding: 1em;
+  .area_head{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    background: #FFF;
+    padding: 1em;
+    border-radius: 0.5em;
+    padding-right: 5em;
+  }
+  .sec_logo{
+    width: 24%;
+    display: flex;
+    align-items: center;
+    padding: 0.75em;
+    a{
+      display: block;
+      width: 100%;
+      line-height: 0;
+    }
+    @include mixin.max-screen(var.$screen-xl) {
+      width: 40%;
+      min-width: 260px;
+      padding: 0.2em;
+    }
+    @include mixin.max-screen(var.$screen-sm) {
+      width: 95%;
+      max-width: 260px;
+      min-width: 0;
+    }
+  }
+  .sec_nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1em;
+
+    //=============== PC用グロナビ =================//
+    .global_menu{
+      text-align: center;
+      line-height: 1.5;
+      font-size: 90%;
+      & > ul{
+        display: flex;
+        .menu{
+          & > a{
+            display: block;
+            padding: 0.7em 0.7em 1.2em;
+            font-weight: bold;
+            text-decoration: none;
+            position: relative;
+            &:after{
+              content: "";
+              width: 0.5em;
+              height: 1em;
+              background: url("../img/common/icon-arrow.svg") no-repeat center center /contain;
+              position: absolute;
+              left: 50%;
+              bottom: 0;
+              margin-left: -0.25em;
+              transform:rotate(90deg); 
+            }
+            &:hover{
+              opacity: 0.8;
+            }
+          }
+          &:hover{
+            .child_menu{
+              visibility: visible;
+              opacity: 1;
+            }
+          }
+          .child_menu{
+            visibility: hidden;
+            opacity: 0;
+            width: calc(100vw - 30px);
+            position: absolute;
+            top: 60%;
+            left: 15px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            border-radius: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px auto 0 auto;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            background: rgb(0, 179, 240);
+            background: linear-gradient(90deg, rgb(0, 179, 240) 0%, rgb(255, 0, 110) 50%, rgb(251, 141, 59) 100%);
+            li{
+              margin: 0 20px 5px 0;
+              min-width: 150px;
+              a{
+                color: #fff;
+                padding: 0.5em 2em 0.5em 0.5em;
+                border-bottom: 1px solid #fff;
+                display: block;
+                text-align: left;
+                position: relative;
+                text-decoration: none;
+                &:after{
+                  content: "";
+                  width: 0.5em;
+                  height: 0.5em;
+                  background: url("../img/common/icon-arrow.svg") no-repeat center center /contain;
+                  position: absolute;
+                  right: 0.5em;
+                  top: 50%;
+                  margin-top: -0.25em;
+                  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(292deg) brightness(113%) contrast(101%);
+                }
+                &:hover{
+                  opacity: 0.8;
+                }
+              }
+            }
+          }
+        }
+      }
+      @include mixin.max-screen(var.$screen-xl) {
+        display: none;
+      }
+    }
+
+    //=============== ハンバーガーメニュー =================//
+    #hanburger{
+      display: none;
+      &:checked{
+        & ~ .sp_menu{
+          transform: translateY(0);
+        }
+      }
+      
+    }
+    .menu_button{
+      width: 3.5em;
+      height: 3.5em;
+      position: absolute;
+      top: 50%;
+      right: 1em;
+      z-index: 10;
+      margin-top: -1.8em;
+      cursor: pointer;
+      &:before{
+        content: "";
+        display: block;
+        background: url("../img/common/icon-humburger.svg") no-repeat center center / 100% auto;
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        color: #fff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      @include mixin.max-screen(var.$screen-sm) {
+        width: 3em;
+        height: 3em;
+        margin-top: -1.5em;
+        &:before{
+          width: 2.2em;
+          height: 2.2em;
+        }
+      }
+    }
+
+    //=============== 訪問者別メニュー =================//
+    .cv_btn{
+      position: relative;
+      &__btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.3em;
+        padding: 1em 1.5em;
+        background-color: var.$text;
+        border-radius: 50px;
+        color: #fff;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        font-size: 90%;
+        line-height: 1;
+        cursor: pointer;
+        img{
+          filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(292deg) brightness(113%) contrast(101%);
+        }
+        &:hover{
+          background: lighten(var.$text, 10%);
+        }
+      }
+      .cv_inner{
+        display: none;
+        position: absolute;
+        background: #fff;
+        padding-top: 30px;
+        top: 30px;
+        border-radius: 0 0 10px 10px;
+        li{
+          border-bottom: 1px solid var.$gray;
+          a{
+            display: block;
+            padding: 1em;
+            font-size: 80%;
+            letter-spacing: 0;
+            text-decoration: none;
+            &:hover{
+              background: var.$base;
+            }
+          }
+        }
+      }
+      @include mixin.max-screen(var.$screen-sm) {
+        display: none;
+      }
+    }
+  }
+
+  //=============== スマホメニュー =================//
+  .sp_menu{
+    transform: translateY(-100%);
+    transition: all 0.5s;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: clamp(4em,15vw,100px) clamp(1em,3vw,30px);
+    background: #fff;
+    overflow-y: scroll;
+    & > ul{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em 0;
+      max-width: 1000px;
+      width: 100%;
+      margin: 0 auto;
+      @include mixin.max-screen(var.$screen-md) {
+        gap: 0;
+      }
+      & > li{
+        width: calc(25% - 20px);
+        margin: 10px;
+        @include mixin.max-screen(var.$screen-tb) {
+          width: calc(33.333% - 20px);
+        }
+        @include mixin.max-screen(var.$screen-md) {
+          width: calc(50% - 20px);
+        }
+        @include mixin.max-screen(var.$screen-xs) {
+          width: 100%;
+        }
+        &.subject{
+          width: calc(33.333% - 20px);
+          margin: 10px;
+          .txt{
+            margin-top: 1em;
+            a{
+              display: block;
+              padding: 0.6em 0;
+              position: relative;
+              line-height: 1.4;
+              text-decoration: none;
+            }
+            .main{
+              margin-bottom: 0.5em;
+              a{
+                padding: 1em 0;
+                font-weight: bold;
+                border-bottom: 1px solid rgba(var.$navy , 0.3);
+                padding-left: 1.5em;
+                position: relative;
+                line-height: 1.4;
+                &:before{
+                  content: "";
+                  width: 1.2em;
+                  height: 1.2em;
+                  background: url("../img/common/icon-arrow-circle.svg") no-repeat;
+                  position: absolute;
+                  left: 0;
+                  top: 50%;
+                  margin-top: -0.5em;
+                }
+              }
+              &.-illustration{
+                a{
+                  &:before{
+                    filter: invert(47%) sepia(37%) saturate(5360%) hue-rotate(340deg) brightness(96%) contrast(90%);
+                  }
+                }
+              }
+              &.-beauty{
+                a{
+                  &:before{
+                    filter: invert(95%) sepia(16%) saturate(3396%) hue-rotate(281deg) brightness(91%) contrast(111%);
+                  }
+                }
+              }
+              &.-hair{
+                a{
+                  &:before{
+                    filter: invert(83%) sepia(36%) saturate(2624%) hue-rotate(173deg) brightness(93%) contrast(95%);
+                  }
+                }
+              }
+            }
+          }
+          @include mixin.max-screen(var.$screen-md) {
+            width: 100%;
+            display: flex;
+            gap: clamp(1em,3vw,2em);
+            .img{
+              width: 35%;
+              padding-top: 1em;
+            }
+            .txt{
+              flex: 1;
+              margin-top: 0;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+            }
+          }
+        }
+        a{
+          display: block;
+          text-decoration: none;
+          &.plus{
+            position: relative;
+            border-bottom: 1px solid #ddd;
+            padding: 0.8em 0.2em;
+            &:after{
+              content: "＋";
+              position: absolute;
+              right: 0;
+              top: 50%;
+              margin-top: -0.5em;
+              line-height: 1;
+            }
+          }
+        }
+        .child_menu{
+          display: none;
+          margin-top: 1em;
+          a{
+            display: block;
+            padding: 0.5em;
+            font-size: 90%;
+            color: #555;
+          }
+        }
+      }
+    }
+  }
+
+}

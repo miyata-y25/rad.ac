@@ -1,0 +1,817 @@
+@charset "utf-8";
+
+@use 'variable' as var;
+@use 'basic/mixin';
+
+/*==================================================================================================
+	Wordpress用 scss
+==================================================================================================*/
+
+///* ---------- ページタイトル ---------- */
+.pageTtl,
+#top_title_area {
+  position: relative;
+  min-height: initial;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  text-align: center;
+  color: var.$text;
+  background-color: var.$line;
+  padding: 3em 0;
+
+  @include mixin.max-screen(var.$screen-md) {
+    height: 40vw;
+  }
+
+  .ttlEnglish,
+  .c-pageTitle {
+    position: relative;
+    display: inline-block;
+    margin: auto;
+    z-index: 2;
+    color: var.$text;
+    text-shadow: none;
+    text-align: center;
+    letter-spacing: 0.1em;
+  }
+
+  img {
+    display: none;
+  }
+}
+
+
+/*---------------- ページネーション ----------------*/
+.pagenavi {
+  text-align: center;
+  color: var.$text;
+  margin: 2em auto;
+  font-size: 1.4rem;
+  margin: 4em auto;
+
+  a,
+  span {
+    border-radius: 0.25em;
+    color: var.$text;
+    border: 1px solid var.$line;
+    display: inline-block;
+    line-height: 1;
+    padding: 1em 2em;
+    margin: 0.25em;
+    text-decoration: none;
+
+    @include mixin.max-screen(var.$screen-md) {
+      padding: 1em;
+    }
+  }
+
+  span[aria-current~='page'],
+  .current,
+  a:hover,
+  span:hover {
+    color: #FFF;
+    background-color: var.$line;
+  }
+}
+
+.wp-pagenavi {
+  clear: both;
+  margin-top: 3em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: var.$default-font;
+  a,
+  span {
+    border: none;
+    background-color: var.$base;
+    color: var.$text;
+    margin: 0.25em;
+    width: 3em;
+    height: 3em;
+    border-radius: 0.2em;
+    line-height: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    &.first , &.last{
+      display: none;
+    }
+  }
+  .pages {
+    width: 4em;
+    display: none;
+  }
+  a:hover,
+  span.current {
+    background-color: var.$line;
+    color: var.$text;
+  }
+  span.current {
+    font-weight: bold;
+    background: var.$text;
+    color: #FFF;
+  }
+}
+
+///* ---------- サイドメニュー ---------- */
+.sidebarWrap,
+#sidebar {
+  width: 25%;
+  padding: 1.5em;
+  background-color: #FFF;
+  border-radius: 0;
+
+  @include mixin.max-screen(var.$screen-md) {
+    width: 100%;
+  }
+
+  .sideTtl {
+    border-bottom: 1px solid var.$line;
+    padding: 0 0 0.5em 0;
+    margin: 2.5em 0 0 0;
+    color: rgba(var.$text, 0.6);
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .sideList {
+    li {
+      margin-top: 0.75em;
+    }
+
+    a {
+      color: initial;
+      text-decoration: none;
+    }
+  }
+}
+
+/*---------------- カラーパレット ----------------*/
+//black
+.has-black-background-color {
+  background-color: #1A1A39;
+}
+.has-black-color {
+  color: #1A1A39;
+}
+//white
+.has-white-background-color {
+  background-color: #FFFFFF;
+}
+.has-white-color {
+  color: #FFFFFF;
+}
+
+//darkgray
+.has-gray-background-color {
+  background-color: #7b7993ff;
+}
+.has-gray-color {
+  color: #7b7993ff;
+}
+
+//orange
+.has-orange-background-color {
+  background-color: #BA6A3F;
+}
+.has-orange-color {
+  color: #BA6A3F;
+}
+
+//red
+.has-red-background-color {
+  background-color: #ff094c;
+}
+.has-red-color {
+  color: #ff094c;
+}
+
+//blue
+.has-darkblue-background-color {
+  background-color: #151368ff;
+}
+.has-darkblue-color {
+  color: #151368ff;
+}
+.has-blue-background-color {
+  background-color: #3958A0;
+}
+.has-blue-color {
+  color: #3958A0;
+}
+.has-lightblue-background-color {
+  background-color: #4995CE;
+}
+.has-lightblue-color {
+  color: #4995CE;
+}
+
+//line
+.has-line-background-color {
+  background-color: #06c755;
+}
+.has-line-color {
+  color: #06c755;
+}
+
+//yellow
+.has-yellow-background-color {
+  background-color: #ffff75;
+}
+.has-yellow-color {
+  color: #ffff75;
+}
+.has-yellow2-background-color {
+  background-color: #ffefda;
+}
+.has-yellow-2-color {
+  color: #ffefda;
+}
+
+///* ---------- ビジュアルエディタ ---------- */
+
+.wpText{
+  max-width: 100%;
+  width: 100%;
+  font-family: var.$default-font;
+  .alignleft ,.alignright{
+    clear: both;
+    &:after {
+      content: " ";
+      display: block;
+      clear: both;
+    }
+  }
+  .wp-block-image{
+    clear: both;
+    &:after {
+      content: " ";
+      display: block;
+      clear: both;
+    }
+    *{
+      :after {
+        content: " ";
+        display: block;
+        clear: both;
+      }
+    }
+  }
+	a{
+		color: var.$blue;
+		text-decoration: underline;
+		transition: 0.3s;
+		&:hover{
+			opacity: 0.8;
+			text-decoration: none;
+		}
+	}
+	& > *{
+		&:first-child{
+			margin-top: 0;
+		}
+	}
+	p{
+		line-height: 2;
+		margin: 1.0em 0;
+		display: block;
+	}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.6 !important;
+    font-weight: 500;
+    width: 100%;
+  }
+  .has-large-font-size {
+    font-weight: bold;
+  }
+	pre {
+		overflow: auto;
+	}
+	strong { font-weight: bold; }
+
+	.aligncenter {
+	    display: block;
+	    margin: 0 auto;
+      text-align: center;
+	}
+	.alignright { float: right; }
+	.alignleft { float: left; }
+
+	img[class*="wp-image-"],
+	img[class*="attachment-"] {
+		max-width: 100%;
+	  height: auto;
+	}
+
+	/* clearfix */
+	.clearfix {
+	    overflow: hidden;
+	    zoom: 1;
+	}
+	.clearfix:after {
+	    content: "";
+	    display: block;
+	    clear: both;
+	}
+
+  h1{
+    font-size: 250%;
+    margin-top: 2em;
+		margin-bottom: 1em;
+  }
+  h2{
+    color: var.$blue;
+    font-size: 180%;
+    margin-top: 2em;
+		margin-bottom: 1em;
+  }
+	h3{
+		font-size: 146%;
+		margin-top: 2em;
+		margin-bottom: 1em;
+    padding-bottom: 0.6em;
+    color: var.$text;
+    border-bottom: var.$text 1px solid;
+	}
+	h4{
+		font-size: 140%;
+		margin-top: 2em;
+		margin-bottom: 1em;
+		padding-left: 0.7em;
+		border-left: 6px solid var.$blue;
+	}
+	h5{
+		color: var.$blue;
+    font-size: 125%;
+    margin-top: 2em;
+		margin-bottom: 1em;
+	}
+	h6{
+		font-size: 125%;
+		margin-top: 2em;
+		margin-bottom: 1em;
+	}
+
+	ul{
+		list-style: none;
+		margin: 1.5em 0;
+    list-style: disc;
+		li{
+      margin-left: 1.5em;
+			margin-bottom: 0.3em;
+      line-height: 1.5;
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+	ol{
+		list-style: none;
+		margin: 1.5em 0;
+		list-style: decimal;
+		li{
+			margin-bottom: 0.3em;
+			margin-left: 1.5em;
+			&:last-child{
+				margin-bottom: 0;
+			}
+      &::marker{
+        color: var.$blue;
+      }
+		}
+	}
+
+  .wp-block-buttons{
+    margin: 1em 0;
+    .wp-block-button{
+      &__link{
+        color: #FFF;
+        text-decoration: none;
+        border-radius: 0.3em;
+        padding: 0.8em 2.2em 0.8em 2em;
+        font-family: var.$default-font;
+        font-size: 100%;
+        min-width: 15em;
+        position: relative;
+        &:after{
+          font-family: "Material Symbols Rounded";
+          content: "\e941";
+          color: #FFF;
+          line-height: 1;
+          text-align: center;
+          font-weight: 300;
+          font-size: 120%;
+          vertical-align: middle;
+          position: absolute;
+          right: 0.5em;
+          top: 50%;
+          transform: translateY(-50%) translateX(0);
+        }
+      }
+      &.is-style-fill{
+        a{
+          color: #FFF;
+          background: var.$text;
+        }
+      }
+      &.is-style-outline{
+        a{
+          &::after{
+            color: var.$text;
+          }
+        }
+      }
+      &.-icon{
+        .wp-block-button__link{
+          display: flex;
+          align-items: center;
+          gap: 0.5em;
+          img{
+            width: 1em !important;
+            height: auto;
+          }
+          &::after{
+            content: "";
+          }
+        }
+      }
+      &.-big{
+        width: 100%;
+        text-align: center;
+        a{
+          width: 100%;
+          max-width: 22em;
+          font-size: 110%;
+        }
+      }
+    }
+  }
+
+	.wp-block-column {
+		h1,h2,h3,h4,h5,h6{
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+    & > *{
+      &:first-child{
+        margin-top: 0 !important;
+      }
+      &:last-child{
+        margin-bottom: 0 !important;
+      }
+    }
+	}
+
+  .wp-block-group{
+    & > *{
+      width: 100%;
+      &:first-child{
+        margin-top: 0;
+      }
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+    h2{
+      margin-bottom: 0.5em;
+    }
+  }
+
+  .wp-block-image{
+    figure{
+      figcaption{
+        display: block;
+      }
+    }
+  }
+
+	.wp-block-gallery{
+		padding: 0;
+		.blocks-gallery-item{
+			margin: 0;
+			padding: 0;
+			width: 48.5%;
+			margin-right: 3%;
+			margin-bottom: 3%;
+			&:nth-child(2n){
+				margin-right: 0;
+			}
+			&:before{
+				display: none;
+			}
+			figure{
+				img{
+          width: 100%;
+          height: 20vw;
+          max-height:320px;
+          object-fit: cover;
+          object-position: center;
+          font-family: 'object-fit: cover; object-position: center;'
+				}
+				@include mixin.max-screen(1020px){
+					img{
+						height: 28vw;
+					}
+				}
+			}
+		}
+	}
+
+	table{
+		margin: 0.5em 0 1em;
+		max-width: 100%!important;
+		min-width: 360px;
+		@include mixin.max-screen(var.$screen-tb){
+			min-width: 240px;
+			width: 100%!important;
+			table-layout: auto!important;
+		}
+		th{
+			background: rgba(var.$gray,0.2);
+			padding: 0.8em 1em;
+			line-height: 1.4;
+			font-weight: 500;
+			min-width: 80px;
+			border: var.$line solid 1px;
+			word-break: break-all;
+		}
+		td{
+			padding: 0.8em 1.5em 0.8em 1em;
+			line-height: 1.4;
+			border: var.$line solid 1px;
+			word-break: break-all;
+		}
+	}
+	iframe{
+		max-width: 100%;
+		margin: 2em 0;
+	}
+	.wp-element-caption{
+		margin: 1em 0;
+		max-width: 100%;
+		text-align: center;
+		color: var.$line;
+    line-height: 1.4;
+	}
+	.wp-caption{
+		margin: 1.6em 0;
+		max-width: 100%;
+		p{
+			text-align: center;
+			margin: 0;
+		}
+	}
+	img{
+		height: auto;
+	}
+
+  .iframeWrap {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 50%;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .wp-video{
+    width: 100% !important;
+    .mejs-container, .mejs-container-keyboard-inactive, ,.wp-video-shortcode{
+      width: 100% !important;
+      height: auto !important;
+      min-width: auto !important;
+      aspect-ratio: 5 / 3;
+    } 
+  }
+
+  //------------------------
+  //オリジナル要素
+  //------------------------
+  .-bgGray{
+    background: var.$line;
+    position: relative;
+    &:before{
+      content: "";
+      width: 100vw;
+      height: 100%;
+      background: var.$line;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateY(0) translateX(-50%);
+      z-index: -1;
+    }
+  }
+  .-bgGreen{
+    background: var.$blue;
+    position: relative;
+    &:before{
+      content: "";
+      width: 100vw;
+      height: 100%;
+      background: var.$blue;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateY(0) translateX(-50%);
+      z-index: -1;
+    }
+  }
+
+  .-inner{
+    padding: 5em 0;
+    @include mixin.max-screen(var.$screen-md) {
+      padding: 4em 0;
+    }
+    @include mixin.max-screen(var.$screen-xs) {
+      padding: 4em 0;
+    }
+    & > *{
+      &:first-child{
+        margin-top: 0;
+      }
+    }
+  }
+  .-lastCont{
+    margin-bottom: -5em;
+    @include mixin.max-screen(var.$screen-md) {
+      margin-bottom: -4em;
+    }
+    @include mixin.max-screen(var.$screen-xs) {
+      margin-bottom: -4em;
+    }
+  }
+
+  .-contInner{
+    padding: clamp(1em,5vw,2em);
+  }
+
+  .strongText{
+    font-size: 120%;
+    font-weight: bold;
+  }
+
+
+  .commonContactArea{
+    overflow: visible;
+    .ark-block-section__color{
+      border-radius: 0.5em;
+    }
+    .ark-block-section__bodyInner{
+      & > *{
+        &:last-child{
+          margin-bottom: 0;
+          padding-bottom: 0;
+          br{
+            display: none;
+          }
+        }
+      }
+    }
+    .flexCont{
+      display: flex;
+      align-items: flex-start;
+      gap: 1em;
+      p{
+        flex: 1;
+      }
+      .has-background{
+        flex: none;
+        background-color: #003764;
+        padding: 0.5em;
+        line-height: 1;
+        border-radius: 0.3em;
+        width: 7em;
+        text-align: center;
+      }
+    }
+    .contactArea {
+      .ark-block-column{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5em;
+        padding: clamp(1em,5vw,2em);
+        box-shadow: none;
+        border-radius: 0.5em;
+        & > *{
+          line-height: 1;
+          padding: 0;
+          margin: 0;
+        }
+      }
+      .num{
+        font-size: clamp(2rem, 6.2vw, 3rem);
+        .arkb-inline-icon{
+          color: var.$blue;
+        }
+      }
+      .formWrap{
+        .ark-block-button__link{
+          text-decoration: none;
+          background: var.$blue;
+          font-size: clamp(1.6rem,4vw,2rem);
+          margin-top: 0.5em;
+        }
+      }
+    }
+    .arkb-fz-l{
+      font-size: 1.15em!important;
+    }
+    .animeObake05{
+      max-width: 200px;
+      width: 22%;
+    }
+    @include mixin.max-screen(var.$screen-md) {
+      .ark-block-section__bodyInner{
+        & > *{
+          &:last-child{
+            br{
+              display: inline;
+            }
+          }
+        }
+      }
+      .flexCont{
+        flex-direction: column;
+      }
+      .animeObake05{
+        width: 30%;
+      }
+    }
+  }
+
+  //プラグインARK
+  .ark-block-faq{
+    &__q{
+      &:before{
+        background: var.$blue;
+        font-family: var.$en-font;
+      }
+    }
+    &__a{
+      &:before{
+        background: #FFF;
+        border: none;
+        font-family: var.$en-font;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .ark-block-buttons{
+    .ark-block-button{
+      .ark-block-button__link{
+        text-decoration: none;
+        padding: 0.7em;
+        border-radius: 0.2em;
+      }
+      .arkb-inline-icon{
+        color: var.$blue;
+      }
+      &.is-btn-fill{
+        .ark-block-button__link{
+          background: var.$line;
+          color: var.$text;
+        }
+      }
+      &.is-btn-outline{
+        .ark-block-button__link{
+          background: #FFF;
+        }
+      }
+    }
+  }
+
+  .ark-block-columns{
+    &.is-style-shadow{
+      .ark-block-column{
+        box-shadow: none;
+        border-radius: 0.3em;
+      }
+    }
+  }
+
+}
+
+.hideCont{
+  display: none !important;
+}

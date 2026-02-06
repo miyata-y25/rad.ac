@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+@use 'variable' as var;
+@use 'basic/mixin';
+@use 'basic/reset';
+@use 'basic/form';
+
+@use 'component-header';
+@use 'component-footer';
+@use 'component-parts';
+
+
+/*==================================================================================================
+	サイト基礎
+==================================================================================================*/
+
+#body_wrap{
+  z-index: auto;
+}
+
+body {
+  color: var.$text;
+  font-family: var.$default-font;
+  font-size: clamp(1.3rem, 2vw, 1.6rem);
+  line-height: 2;
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+  background: var.$base;
+  &.noScrolled {
+    overflow: hidden;
+  }
+  h1,h2,h3,h4,h5,h6{
+    font-weight: 500;
+  }
+  a {
+    transition: 0.5s;
+    color: var.$text;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  img {
+    height: auto;
+  }
+
+  .inner {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    @include mixin.inner();
+  }
+  .innerS{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    @include mixin.inner();
+  }
+  .innerSs{
+    width: 100%;
+    max-width: 940px;
+    margin: 0 auto;
+    @include mixin.inner();
+  }
+
+}
+
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
+.wrap {
+  overflow-x: hidden;
+  position: relative;
+}
