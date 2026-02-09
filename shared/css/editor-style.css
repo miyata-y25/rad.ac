@@ -1,1 +1,289 @@
-@import"https://fonts.googleapis.com/css2?family=BIZ+UDMincho&family=Bebas+Neue&family=Cormorant+Infant:ital,wght@0,300..700;1,300..700&family=Montserrat:wght@100..900&family=Noto+Sans+JP:wght@100..900&family=Zen+Maru+Gothic:wght@500;700&display=swap";.editor-visual-editor{background-color:#fff}.block-editor-iframe .wp-block,.editor-styles-wrapper .wp-block{max-width:800px !important}.block-editor-iframe__body,.block-editor-iframe.block-editor-writing-flow,.editor-styles-wrapper__body,.editor-styles-wrapper.block-editor-writing-flow{font-family:"Noto Sans JP","Yu Gothic Medium","游ゴシック Medium",YuGothic,"游ゴシック体","ヒラギノ角ゴ Pro W3","メイリオ",sans-serif;width:auto;height:auto !important;width:96%;background-color:#fff;margin:20px auto;max-width:100% !important;padding:25px 5vw}.block-editor-iframe__body .wp-block-post-title,.block-editor-iframe.block-editor-writing-flow .wp-block-post-title,.editor-styles-wrapper__body .wp-block-post-title,.editor-styles-wrapper.block-editor-writing-flow .wp-block-post-title{max-width:800px !important}.block-editor-iframe__body .is-root-container,.block-editor-iframe.block-editor-writing-flow .is-root-container,.editor-styles-wrapper__body .is-root-container,.editor-styles-wrapper.block-editor-writing-flow .is-root-container{max-width:800px !important}.block-editor-iframe__body .is-root-container>*,.block-editor-iframe.block-editor-writing-flow .is-root-container>*,.editor-styles-wrapper__body .is-root-container>*,.editor-styles-wrapper.block-editor-writing-flow .is-root-container>*{max-width:100% !important}.block-editor-iframe__body .alignleft,.block-editor-iframe__body .alignright,.block-editor-iframe.block-editor-writing-flow .alignleft,.block-editor-iframe.block-editor-writing-flow .alignright,.editor-styles-wrapper__body .alignleft,.editor-styles-wrapper__body .alignright,.editor-styles-wrapper.block-editor-writing-flow .alignleft,.editor-styles-wrapper.block-editor-writing-flow .alignright{clear:both}.block-editor-iframe__body .alignleft :after,.block-editor-iframe__body .alignright :after,.block-editor-iframe.block-editor-writing-flow .alignleft :after,.block-editor-iframe.block-editor-writing-flow .alignright :after,.editor-styles-wrapper__body .alignleft :after,.editor-styles-wrapper__body .alignright :after,.editor-styles-wrapper.block-editor-writing-flow .alignleft :after,.editor-styles-wrapper.block-editor-writing-flow .alignright :after{content:" ";display:block;clear:both}.block-editor-iframe__body .wp-block-image,.block-editor-iframe.block-editor-writing-flow .wp-block-image,.editor-styles-wrapper__body .wp-block-image,.editor-styles-wrapper.block-editor-writing-flow .wp-block-image{clear:both}.block-editor-iframe__body .wp-block-image:after,.block-editor-iframe.block-editor-writing-flow .wp-block-image:after,.editor-styles-wrapper__body .wp-block-image:after,.editor-styles-wrapper.block-editor-writing-flow .wp-block-image:after{content:" ";display:block;clear:both}.block-editor-iframe__body .wp-block-image * :after,.block-editor-iframe.block-editor-writing-flow .wp-block-image * :after,.editor-styles-wrapper__body .wp-block-image * :after,.editor-styles-wrapper.block-editor-writing-flow .wp-block-image * :after{content:" ";display:block;clear:both}.block-editor-iframe__body h1,.block-editor-iframe__body h2,.block-editor-iframe__body h3,.block-editor-iframe__body h4,.block-editor-iframe__body h5,.block-editor-iframe__body h6,.block-editor-iframe__body p,.block-editor-iframe__body ul,.block-editor-iframe__body li,.block-editor-iframe__body ol,.block-editor-iframe__body span,.block-editor-iframe__body table,.block-editor-iframe__body th,.block-editor-iframe__body td,.block-editor-iframe.block-editor-writing-flow h1,.block-editor-iframe.block-editor-writing-flow h2,.block-editor-iframe.block-editor-writing-flow h3,.block-editor-iframe.block-editor-writing-flow h4,.block-editor-iframe.block-editor-writing-flow h5,.block-editor-iframe.block-editor-writing-flow h6,.block-editor-iframe.block-editor-writing-flow p,.block-editor-iframe.block-editor-writing-flow ul,.block-editor-iframe.block-editor-writing-flow li,.block-editor-iframe.block-editor-writing-flow ol,.block-editor-iframe.block-editor-writing-flow span,.block-editor-iframe.block-editor-writing-flow table,.block-editor-iframe.block-editor-writing-flow th,.block-editor-iframe.block-editor-writing-flow td,.editor-styles-wrapper__body h1,.editor-styles-wrapper__body h2,.editor-styles-wrapper__body h3,.editor-styles-wrapper__body h4,.editor-styles-wrapper__body h5,.editor-styles-wrapper__body h6,.editor-styles-wrapper__body p,.editor-styles-wrapper__body ul,.editor-styles-wrapper__body li,.editor-styles-wrapper__body ol,.editor-styles-wrapper__body span,.editor-styles-wrapper__body table,.editor-styles-wrapper__body th,.editor-styles-wrapper__body td,.editor-styles-wrapper.block-editor-writing-flow h1,.editor-styles-wrapper.block-editor-writing-flow h2,.editor-styles-wrapper.block-editor-writing-flow h3,.editor-styles-wrapper.block-editor-writing-flow h4,.editor-styles-wrapper.block-editor-writing-flow h5,.editor-styles-wrapper.block-editor-writing-flow h6,.editor-styles-wrapper.block-editor-writing-flow p,.editor-styles-wrapper.block-editor-writing-flow ul,.editor-styles-wrapper.block-editor-writing-flow li,.editor-styles-wrapper.block-editor-writing-flow ol,.editor-styles-wrapper.block-editor-writing-flow span,.editor-styles-wrapper.block-editor-writing-flow table,.editor-styles-wrapper.block-editor-writing-flow th,.editor-styles-wrapper.block-editor-writing-flow td{font-family:"Noto Sans JP","Yu Gothic Medium","游ゴシック Medium",YuGothic,"游ゴシック体","ヒラギノ角ゴ Pro W3","メイリオ",sans-serif}.block-editor-iframe__body .edit-post-visual-editor__post-title-wrapper,.block-editor-iframe.block-editor-writing-flow .edit-post-visual-editor__post-title-wrapper,.editor-styles-wrapper__body .edit-post-visual-editor__post-title-wrapper,.editor-styles-wrapper.block-editor-writing-flow .edit-post-visual-editor__post-title-wrapper{padding-bottom:1em;border-bottom:#ccc 1px solid}.block-editor-iframe__body .edit-post-visual-editor__post-title-wrapper .editor-post-title,.block-editor-iframe.block-editor-writing-flow .edit-post-visual-editor__post-title-wrapper .editor-post-title,.editor-styles-wrapper__body .edit-post-visual-editor__post-title-wrapper .editor-post-title,.editor-styles-wrapper.block-editor-writing-flow .edit-post-visual-editor__post-title-wrapper .editor-post-title{font-size:260%;font-weight:bold;font-family:"Noto Sans JP","Yu Gothic Medium","游ゴシック Medium",YuGothic,"游ゴシック体","ヒラギノ角ゴ Pro W3","メイリオ",sans-serif}.block-editor-iframe__body .block-editor-rich-text__editable.wp-block-paragraph,.block-editor-iframe.block-editor-writing-flow .block-editor-rich-text__editable.wp-block-paragraph,.editor-styles-wrapper__body .block-editor-rich-text__editable.wp-block-paragraph,.editor-styles-wrapper.block-editor-writing-flow .block-editor-rich-text__editable.wp-block-paragraph{font-size:90%}.block-editor-iframe__body .block-editor-rich-text__editable a,.block-editor-iframe.block-editor-writing-flow .block-editor-rich-text__editable a,.editor-styles-wrapper__body .block-editor-rich-text__editable a,.editor-styles-wrapper.block-editor-writing-flow .block-editor-rich-text__editable a{text-decoration:underline;color:#71bce9}.block-editor-iframe__body h1,.block-editor-iframe__body h2,.block-editor-iframe__body h3,.block-editor-iframe__body h4,.block-editor-iframe__body h5,.block-editor-iframe__body h6,.block-editor-iframe.block-editor-writing-flow h1,.block-editor-iframe.block-editor-writing-flow h2,.block-editor-iframe.block-editor-writing-flow h3,.block-editor-iframe.block-editor-writing-flow h4,.block-editor-iframe.block-editor-writing-flow h5,.block-editor-iframe.block-editor-writing-flow h6,.editor-styles-wrapper__body h1,.editor-styles-wrapper__body h2,.editor-styles-wrapper__body h3,.editor-styles-wrapper__body h4,.editor-styles-wrapper__body h5,.editor-styles-wrapper__body h6,.editor-styles-wrapper.block-editor-writing-flow h1,.editor-styles-wrapper.block-editor-writing-flow h2,.editor-styles-wrapper.block-editor-writing-flow h3,.editor-styles-wrapper.block-editor-writing-flow h4,.editor-styles-wrapper.block-editor-writing-flow h5,.editor-styles-wrapper.block-editor-writing-flow h6{margin-top:2em;margin-bottom:1em;font-weight:500;width:100%}.block-editor-iframe__body h1,.block-editor-iframe.block-editor-writing-flow h1,.editor-styles-wrapper__body h1,.editor-styles-wrapper.block-editor-writing-flow h1{font-size:240%;font-family:"Noto Sans JP","Yu Gothic Medium","游ゴシック Medium",YuGothic,"游ゴシック体","ヒラギノ角ゴ Pro W3","メイリオ",sans-serif}.block-editor-iframe__body h2,.block-editor-iframe.block-editor-writing-flow h2,.editor-styles-wrapper__body h2,.editor-styles-wrapper.block-editor-writing-flow h2{color:#172222;font-size:180%;margin-top:2em;margin-bottom:1em;font-family:"Noto Sans JP","Yu Gothic Medium","游ゴシック Medium",YuGothic,"游ゴシック体","ヒラギノ角ゴ Pro W3","メイリオ",sans-serif}.block-editor-iframe__body h3,.block-editor-iframe.block-editor-writing-flow h3,.editor-styles-wrapper__body h3,.editor-styles-wrapper.block-editor-writing-flow h3{font-size:146%;margin-top:2em;margin-bottom:1em;padding-bottom:.6em;color:#172222;border-bottom:#172222 1px solid;font-family:"Noto Sans JP","Yu Gothic Medium","游ゴシック Medium",YuGothic,"游ゴシック体","ヒラギノ角ゴ Pro W3","メイリオ",sans-serif}.block-editor-iframe__body h4,.block-editor-iframe.block-editor-writing-flow h4,.editor-styles-wrapper__body h4,.editor-styles-wrapper.block-editor-writing-flow h4{font-size:130%;padding-left:.7em;border-left:6px solid #71bce9;font-family:"Noto Sans JP","Yu Gothic Medium","游ゴシック Medium",YuGothic,"游ゴシック体","ヒラギノ角ゴ Pro W3","メイリオ",sans-serif}.block-editor-iframe__body h5,.block-editor-iframe.block-editor-writing-flow h5,.editor-styles-wrapper__body h5,.editor-styles-wrapper.block-editor-writing-flow h5{color:#71bce9;font-size:115%}.block-editor-iframe__body h6,.block-editor-iframe.block-editor-writing-flow h6,.editor-styles-wrapper__body h6,.editor-styles-wrapper.block-editor-writing-flow h6{font-size:115%}.block-editor-iframe__body .wp-block-buttons,.block-editor-iframe.block-editor-writing-flow .wp-block-buttons,.editor-styles-wrapper__body .wp-block-buttons,.editor-styles-wrapper.block-editor-writing-flow .wp-block-buttons{margin:1em 0}.block-editor-iframe__body .wp-block-buttons .wp-block-button__link,.block-editor-iframe.block-editor-writing-flow .wp-block-buttons .wp-block-button__link,.editor-styles-wrapper__body .wp-block-buttons .wp-block-button__link,.editor-styles-wrapper.block-editor-writing-flow .wp-block-buttons .wp-block-button__link{text-decoration:none;border-radius:.3em;padding:.8em 2em;font-family:"Noto Sans JP","Yu Gothic Medium","游ゴシック Medium",YuGothic,"游ゴシック体","ヒラギノ角ゴ Pro W3","メイリオ",sans-serif;pointer-events:none}.block-editor-iframe__body .wp-block-buttons .wp-block-button.is-style-fill .wp-block-button__link,.block-editor-iframe.block-editor-writing-flow .wp-block-buttons .wp-block-button.is-style-fill .wp-block-button__link,.editor-styles-wrapper__body .wp-block-buttons .wp-block-button.is-style-fill .wp-block-button__link,.editor-styles-wrapper.block-editor-writing-flow .wp-block-buttons .wp-block-button.is-style-fill .wp-block-button__link{color:#fff !important;background:#172222}.block-editor-iframe__body ul,.block-editor-iframe.block-editor-writing-flow ul,.editor-styles-wrapper__body ul,.editor-styles-wrapper.block-editor-writing-flow ul{list-style:none;margin:1em 0;list-style:disc;padding:0}.block-editor-iframe__body ul li,.block-editor-iframe.block-editor-writing-flow ul li,.editor-styles-wrapper__body ul li,.editor-styles-wrapper.block-editor-writing-flow ul li{margin:0;padding:0;margin-left:1.5em;margin-bottom:.3em;font-size:90%}.block-editor-iframe__body ul li:last-child,.block-editor-iframe.block-editor-writing-flow ul li:last-child,.editor-styles-wrapper__body ul li:last-child,.editor-styles-wrapper.block-editor-writing-flow ul li:last-child{margin-bottom:0}.block-editor-iframe__body ol,.block-editor-iframe.block-editor-writing-flow ol,.editor-styles-wrapper__body ol,.editor-styles-wrapper.block-editor-writing-flow ol{list-style:none;margin:1em 0;padding:0;list-style:decimal}.block-editor-iframe__body ol li,.block-editor-iframe.block-editor-writing-flow ol li,.editor-styles-wrapper__body ol li,.editor-styles-wrapper.block-editor-writing-flow ol li{margin:0;padding:0;margin-bottom:.3em;margin-left:1.5em;font-size:90%}.block-editor-iframe__body ol li:last-child,.block-editor-iframe.block-editor-writing-flow ol li:last-child,.editor-styles-wrapper__body ol li:last-child,.editor-styles-wrapper.block-editor-writing-flow ol li:last-child{margin-bottom:0}.block-editor-iframe__body .wp-block-table,.block-editor-iframe.block-editor-writing-flow .wp-block-table,.editor-styles-wrapper__body .wp-block-table,.editor-styles-wrapper.block-editor-writing-flow .wp-block-table{width:100%;max-width:900px}.block-editor-iframe__body .wp-block-table table,.block-editor-iframe.block-editor-writing-flow .wp-block-table table,.editor-styles-wrapper__body .wp-block-table table,.editor-styles-wrapper.block-editor-writing-flow .wp-block-table table{margin:.5em 0 1em;max-width:100% !important;min-width:360px;font-size:90%;font-family:"Noto Sans JP","Yu Gothic Medium","游ゴシック Medium",YuGothic,"游ゴシック体","ヒラギノ角ゴ Pro W3","メイリオ",sans-serif}@media screen and (max-width: 860px){.block-editor-iframe__body .wp-block-table table,.block-editor-iframe.block-editor-writing-flow .wp-block-table table,.editor-styles-wrapper__body .wp-block-table table,.editor-styles-wrapper.block-editor-writing-flow .wp-block-table table{min-width:240px;width:100% !important;table-layout:auto !important}}.block-editor-iframe__body .wp-block-table table th,.block-editor-iframe.block-editor-writing-flow .wp-block-table table th,.editor-styles-wrapper__body .wp-block-table table th,.editor-styles-wrapper.block-editor-writing-flow .wp-block-table table th{background:#ccc;padding:.8em 1em;line-height:1.4;font-weight:bold;min-width:80px;border:#ccc solid 1px;word-break:break-all;font-family:"Noto Sans JP","Yu Gothic Medium","游ゴシック Medium",YuGothic,"游ゴシック体","ヒラギノ角ゴ Pro W3","メイリオ",sans-serif}.block-editor-iframe__body .wp-block-table table td,.block-editor-iframe.block-editor-writing-flow .wp-block-table table td,.editor-styles-wrapper__body .wp-block-table table td,.editor-styles-wrapper.block-editor-writing-flow .wp-block-table table td{padding:.8em 1.5em .8em 1em;line-height:1.4;border:#ccc solid 1px;word-break:break-all}.block-editor-iframe__body .has-black-background-color,.block-editor-iframe.block-editor-writing-flow .has-black-background-color,.editor-styles-wrapper__body .has-black-background-color,.editor-styles-wrapper.block-editor-writing-flow .has-black-background-color{background-color:#292220}.block-editor-iframe__body .has-black-color,.block-editor-iframe.block-editor-writing-flow .has-black-color,.editor-styles-wrapper__body .has-black-color,.editor-styles-wrapper.block-editor-writing-flow .has-black-color{color:#292220}.block-editor-iframe__body .has-white-background-color,.block-editor-iframe.block-editor-writing-flow .has-white-background-color,.editor-styles-wrapper__body .has-white-background-color,.editor-styles-wrapper.block-editor-writing-flow .has-white-background-color{background-color:#fff}.block-editor-iframe__body .has-white-color,.block-editor-iframe.block-editor-writing-flow .has-white-color,.editor-styles-wrapper__body .has-white-color,.editor-styles-wrapper.block-editor-writing-flow .has-white-color{color:#fff}.block-editor-iframe__body .has-gray-background-color,.block-editor-iframe.block-editor-writing-flow .has-gray-background-color,.editor-styles-wrapper__body .has-gray-background-color,.editor-styles-wrapper.block-editor-writing-flow .has-gray-background-color{background-color:#bbb2b4}.block-editor-iframe__body .has-gray-color,.block-editor-iframe.block-editor-writing-flow .has-gray-color,.editor-styles-wrapper__body .has-gray-color,.editor-styles-wrapper.block-editor-writing-flow .has-gray-color{color:#bbb2b4}.block-editor-iframe__body .has-brown-background-color,.block-editor-iframe.block-editor-writing-flow .has-brown-background-color,.editor-styles-wrapper__body .has-brown-background-color,.editor-styles-wrapper.block-editor-writing-flow .has-brown-background-color{background-color:#654b3d}.block-editor-iframe__body .has-brown-color,.block-editor-iframe.block-editor-writing-flow .has-brown-color,.editor-styles-wrapper__body .has-brown-color,.editor-styles-wrapper.block-editor-writing-flow .has-brown-color{color:#654b3d}.block-editor-iframe__body .has-lightbrown-background-color,.block-editor-iframe.block-editor-writing-flow .has-lightbrown-background-color,.editor-styles-wrapper__body .has-lightbrown-background-color,.editor-styles-wrapper.block-editor-writing-flow .has-lightbrown-background-color{background-color:#ddd2c8}.block-editor-iframe__body .has-lightbrown-color,.block-editor-iframe.block-editor-writing-flow .has-lightbrown-color,.editor-styles-wrapper__body .has-lightbrown-color,.editor-styles-wrapper.block-editor-writing-flow .has-lightbrown-color{color:#ddd2c8}.block-editor-iframe__body .has-orange-background-color,.block-editor-iframe.block-editor-writing-flow .has-orange-background-color,.editor-styles-wrapper__body .has-orange-background-color,.editor-styles-wrapper.block-editor-writing-flow .has-orange-background-color{background-color:#ba6a3f}.block-editor-iframe__body .has-orange-color,.block-editor-iframe.block-editor-writing-flow .has-orange-color,.editor-styles-wrapper__body .has-orange-color,.editor-styles-wrapper.block-editor-writing-flow .has-orange-color{color:#ba6a3f}.block-editor-iframe__body .has-red-background-color,.block-editor-iframe.block-editor-writing-flow .has-red-background-color,.editor-styles-wrapper__body .has-red-background-color,.editor-styles-wrapper.block-editor-writing-flow .has-red-background-color{background-color:#ff094c}.block-editor-iframe__body .has-red-color,.block-editor-iframe.block-editor-writing-flow .has-red-color,.editor-styles-wrapper__body .has-red-color,.editor-styles-wrapper.block-editor-writing-flow .has-red-color{color:#ff094c}.block-editor-iframe__body .has-blue-background-color,.block-editor-iframe.block-editor-writing-flow .has-blue-background-color,.editor-styles-wrapper__body .has-blue-background-color,.editor-styles-wrapper.block-editor-writing-flow .has-blue-background-color{background-color:#3f6cba}.block-editor-iframe__body .has-blue-color,.block-editor-iframe.block-editor-writing-flow .has-blue-color,.editor-styles-wrapper__body .has-blue-color,.editor-styles-wrapper.block-editor-writing-flow .has-blue-color{color:#3f6cba}.block-editor-iframe__body .has-lightblue-background-color,.block-editor-iframe.block-editor-writing-flow .has-lightblue-background-color,.editor-styles-wrapper__body .has-lightblue-background-color,.editor-styles-wrapper.block-editor-writing-flow .has-lightblue-background-color{background-color:#4492d6}.block-editor-iframe__body .has-lightblue-color,.block-editor-iframe.block-editor-writing-flow .has-lightblue-color,.editor-styles-wrapper__body .has-lightblue-color,.editor-styles-wrapper.block-editor-writing-flow .has-lightblue-color{color:#4492d6}.block-editor-iframe__body .has-line-background-color,.block-editor-iframe.block-editor-writing-flow .has-line-background-color,.editor-styles-wrapper__body .has-line-background-color,.editor-styles-wrapper.block-editor-writing-flow .has-line-background-color{background-color:#06c755}.block-editor-iframe__body .has-line-color,.block-editor-iframe.block-editor-writing-flow .has-line-color,.editor-styles-wrapper__body .has-line-color,.editor-styles-wrapper.block-editor-writing-flow .has-line-color{color:#06c755}.block-editor-iframe__body .has-yellow-background-color,.block-editor-iframe.block-editor-writing-flow .has-yellow-background-color,.editor-styles-wrapper__body .has-yellow-background-color,.editor-styles-wrapper.block-editor-writing-flow .has-yellow-background-color{background-color:#ffff75}.block-editor-iframe__body .has-yellow-color,.block-editor-iframe.block-editor-writing-flow .has-yellow-color,.editor-styles-wrapper__body .has-yellow-color,.editor-styles-wrapper.block-editor-writing-flow .has-yellow-color{color:#ffff75}.block-editor-iframe__body .has-yellow2-background-color,.block-editor-iframe.block-editor-writing-flow .has-yellow2-background-color,.editor-styles-wrapper__body .has-yellow2-background-color,.editor-styles-wrapper.block-editor-writing-flow .has-yellow2-background-color{background-color:#ffefda}.block-editor-iframe__body .has-yellow-2-color,.block-editor-iframe.block-editor-writing-flow .has-yellow-2-color,.editor-styles-wrapper__body .has-yellow-2-color,.editor-styles-wrapper.block-editor-writing-flow .has-yellow-2-color{color:#ffefda}.wp-block{max-width:900px}.wp-block-image .components-resizable-box__container{height:auto !important;max-width:100% !important}.edit-post-visual-editor{background:#fff}.edit-post-visual-editor__post-title-wrapper .editor-post-title{margin:0 auto}.mce-edit-area iframe body{font-family:"Noto Sans JP","Yu Gothic Medium","游ゴシック Medium",YuGothic,"游ゴシック体","ヒラギノ角ゴ Pro W3","メイリオ",sans-serif;font-size:100%;color:#172222;background:#fff;width:auto;height:auto !important;width:100%}
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=BIZ+UDMincho&family=Bebas+Neue&family=Cormorant+Infant:ital,wght@0,300..700;1,300..700&family=Montserrat:wght@100..900&family=Noto+Sans+JP:wght@100..900&family=Zen+Maru+Gothic:wght@500;700&display=swap");
+/*----------------------------------------------------
+投稿編集画面のカスタマイズ
+-----------------------------------------------------*/
+.editor-visual-editor {
+  background-color: #FFF;
+}
+
+.block-editor-iframe .wp-block, .editor-styles-wrapper .wp-block {
+  max-width: 800px !important;
+}
+.block-editor-iframe__body, .block-editor-iframe.block-editor-writing-flow, .editor-styles-wrapper__body, .editor-styles-wrapper.block-editor-writing-flow {
+  font-family: "Noto Sans JP", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  width: auto;
+  height: auto !important;
+  width: 96%;
+  background-color: #FFF;
+  margin: 20px auto;
+  max-width: 100% !important;
+  padding: 25px 5vw;
+  /*---------------- カラーパレット ----------------*/
+}
+.block-editor-iframe__body .wp-block-post-title, .block-editor-iframe.block-editor-writing-flow .wp-block-post-title, .editor-styles-wrapper__body .wp-block-post-title, .editor-styles-wrapper.block-editor-writing-flow .wp-block-post-title {
+  max-width: 800px !important;
+}
+.block-editor-iframe__body .is-root-container, .block-editor-iframe.block-editor-writing-flow .is-root-container, .editor-styles-wrapper__body .is-root-container, .editor-styles-wrapper.block-editor-writing-flow .is-root-container {
+  max-width: 800px !important;
+}
+.block-editor-iframe__body .is-root-container > *, .block-editor-iframe.block-editor-writing-flow .is-root-container > *, .editor-styles-wrapper__body .is-root-container > *, .editor-styles-wrapper.block-editor-writing-flow .is-root-container > * {
+  max-width: 100% !important;
+}
+.block-editor-iframe__body .alignleft, .block-editor-iframe__body .alignright, .block-editor-iframe.block-editor-writing-flow .alignleft, .block-editor-iframe.block-editor-writing-flow .alignright, .editor-styles-wrapper__body .alignleft, .editor-styles-wrapper__body .alignright, .editor-styles-wrapper.block-editor-writing-flow .alignleft, .editor-styles-wrapper.block-editor-writing-flow .alignright {
+  clear: both;
+}
+.block-editor-iframe__body .alignleft :after, .block-editor-iframe__body .alignright :after, .block-editor-iframe.block-editor-writing-flow .alignleft :after, .block-editor-iframe.block-editor-writing-flow .alignright :after, .editor-styles-wrapper__body .alignleft :after, .editor-styles-wrapper__body .alignright :after, .editor-styles-wrapper.block-editor-writing-flow .alignleft :after, .editor-styles-wrapper.block-editor-writing-flow .alignright :after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+.block-editor-iframe__body .wp-block-image, .block-editor-iframe.block-editor-writing-flow .wp-block-image, .editor-styles-wrapper__body .wp-block-image, .editor-styles-wrapper.block-editor-writing-flow .wp-block-image {
+  clear: both;
+}
+.block-editor-iframe__body .wp-block-image:after, .block-editor-iframe.block-editor-writing-flow .wp-block-image:after, .editor-styles-wrapper__body .wp-block-image:after, .editor-styles-wrapper.block-editor-writing-flow .wp-block-image:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+.block-editor-iframe__body .wp-block-image * :after, .block-editor-iframe.block-editor-writing-flow .wp-block-image * :after, .editor-styles-wrapper__body .wp-block-image * :after, .editor-styles-wrapper.block-editor-writing-flow .wp-block-image * :after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+.block-editor-iframe__body h1, .block-editor-iframe__body h2, .block-editor-iframe__body h3, .block-editor-iframe__body h4, .block-editor-iframe__body h5, .block-editor-iframe__body h6, .block-editor-iframe__body p, .block-editor-iframe__body ul, .block-editor-iframe__body li, .block-editor-iframe__body ol, .block-editor-iframe__body span, .block-editor-iframe__body table, .block-editor-iframe__body th, .block-editor-iframe__body td, .block-editor-iframe.block-editor-writing-flow h1, .block-editor-iframe.block-editor-writing-flow h2, .block-editor-iframe.block-editor-writing-flow h3, .block-editor-iframe.block-editor-writing-flow h4, .block-editor-iframe.block-editor-writing-flow h5, .block-editor-iframe.block-editor-writing-flow h6, .block-editor-iframe.block-editor-writing-flow p, .block-editor-iframe.block-editor-writing-flow ul, .block-editor-iframe.block-editor-writing-flow li, .block-editor-iframe.block-editor-writing-flow ol, .block-editor-iframe.block-editor-writing-flow span, .block-editor-iframe.block-editor-writing-flow table, .block-editor-iframe.block-editor-writing-flow th, .block-editor-iframe.block-editor-writing-flow td, .editor-styles-wrapper__body h1, .editor-styles-wrapper__body h2, .editor-styles-wrapper__body h3, .editor-styles-wrapper__body h4, .editor-styles-wrapper__body h5, .editor-styles-wrapper__body h6, .editor-styles-wrapper__body p, .editor-styles-wrapper__body ul, .editor-styles-wrapper__body li, .editor-styles-wrapper__body ol, .editor-styles-wrapper__body span, .editor-styles-wrapper__body table, .editor-styles-wrapper__body th, .editor-styles-wrapper__body td, .editor-styles-wrapper.block-editor-writing-flow h1, .editor-styles-wrapper.block-editor-writing-flow h2, .editor-styles-wrapper.block-editor-writing-flow h3, .editor-styles-wrapper.block-editor-writing-flow h4, .editor-styles-wrapper.block-editor-writing-flow h5, .editor-styles-wrapper.block-editor-writing-flow h6, .editor-styles-wrapper.block-editor-writing-flow p, .editor-styles-wrapper.block-editor-writing-flow ul, .editor-styles-wrapper.block-editor-writing-flow li, .editor-styles-wrapper.block-editor-writing-flow ol, .editor-styles-wrapper.block-editor-writing-flow span, .editor-styles-wrapper.block-editor-writing-flow table, .editor-styles-wrapper.block-editor-writing-flow th, .editor-styles-wrapper.block-editor-writing-flow td {
+  font-family: "Noto Sans JP", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+}
+.block-editor-iframe__body .edit-post-visual-editor__post-title-wrapper, .block-editor-iframe.block-editor-writing-flow .edit-post-visual-editor__post-title-wrapper, .editor-styles-wrapper__body .edit-post-visual-editor__post-title-wrapper, .editor-styles-wrapper.block-editor-writing-flow .edit-post-visual-editor__post-title-wrapper {
+  padding-bottom: 1em;
+  border-bottom: #cccccc 1px solid;
+}
+.block-editor-iframe__body .edit-post-visual-editor__post-title-wrapper .editor-post-title, .block-editor-iframe.block-editor-writing-flow .edit-post-visual-editor__post-title-wrapper .editor-post-title, .editor-styles-wrapper__body .edit-post-visual-editor__post-title-wrapper .editor-post-title, .editor-styles-wrapper.block-editor-writing-flow .edit-post-visual-editor__post-title-wrapper .editor-post-title {
+  font-size: 260%;
+  font-weight: bold;
+  font-family: "Noto Sans JP", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+}
+.block-editor-iframe__body .block-editor-rich-text__editable.wp-block-paragraph, .block-editor-iframe.block-editor-writing-flow .block-editor-rich-text__editable.wp-block-paragraph, .editor-styles-wrapper__body .block-editor-rich-text__editable.wp-block-paragraph, .editor-styles-wrapper.block-editor-writing-flow .block-editor-rich-text__editable.wp-block-paragraph {
+  font-size: 90%;
+}
+.block-editor-iframe__body .block-editor-rich-text__editable a, .block-editor-iframe.block-editor-writing-flow .block-editor-rich-text__editable a, .editor-styles-wrapper__body .block-editor-rich-text__editable a, .editor-styles-wrapper.block-editor-writing-flow .block-editor-rich-text__editable a {
+  text-decoration: underline;
+  color: #71bce9;
+}
+.block-editor-iframe__body h1, .block-editor-iframe__body h2, .block-editor-iframe__body h3, .block-editor-iframe__body h4, .block-editor-iframe__body h5, .block-editor-iframe__body h6, .block-editor-iframe.block-editor-writing-flow h1, .block-editor-iframe.block-editor-writing-flow h2, .block-editor-iframe.block-editor-writing-flow h3, .block-editor-iframe.block-editor-writing-flow h4, .block-editor-iframe.block-editor-writing-flow h5, .block-editor-iframe.block-editor-writing-flow h6, .editor-styles-wrapper__body h1, .editor-styles-wrapper__body h2, .editor-styles-wrapper__body h3, .editor-styles-wrapper__body h4, .editor-styles-wrapper__body h5, .editor-styles-wrapper__body h6, .editor-styles-wrapper.block-editor-writing-flow h1, .editor-styles-wrapper.block-editor-writing-flow h2, .editor-styles-wrapper.block-editor-writing-flow h3, .editor-styles-wrapper.block-editor-writing-flow h4, .editor-styles-wrapper.block-editor-writing-flow h5, .editor-styles-wrapper.block-editor-writing-flow h6 {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  font-weight: 500;
+  width: 100%;
+}
+.block-editor-iframe__body h1, .block-editor-iframe.block-editor-writing-flow h1, .editor-styles-wrapper__body h1, .editor-styles-wrapper.block-editor-writing-flow h1 {
+  font-size: 240%;
+  font-family: "Noto Sans JP", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+}
+.block-editor-iframe__body h2, .block-editor-iframe.block-editor-writing-flow h2, .editor-styles-wrapper__body h2, .editor-styles-wrapper.block-editor-writing-flow h2 {
+  color: #172222;
+  font-size: 180%;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  font-family: "Noto Sans JP", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+}
+.block-editor-iframe__body h3, .block-editor-iframe.block-editor-writing-flow h3, .editor-styles-wrapper__body h3, .editor-styles-wrapper.block-editor-writing-flow h3 {
+  font-size: 146%;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  padding-bottom: 0.6em;
+  color: #172222;
+  border-bottom: #172222 1px solid;
+  font-family: "Noto Sans JP", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+}
+.block-editor-iframe__body h4, .block-editor-iframe.block-editor-writing-flow h4, .editor-styles-wrapper__body h4, .editor-styles-wrapper.block-editor-writing-flow h4 {
+  font-size: 130%;
+  padding-left: 0.7em;
+  border-left: 6px solid #71bce9;
+  font-family: "Noto Sans JP", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+}
+.block-editor-iframe__body h5, .block-editor-iframe.block-editor-writing-flow h5, .editor-styles-wrapper__body h5, .editor-styles-wrapper.block-editor-writing-flow h5 {
+  color: #71bce9;
+  font-size: 115%;
+}
+.block-editor-iframe__body h6, .block-editor-iframe.block-editor-writing-flow h6, .editor-styles-wrapper__body h6, .editor-styles-wrapper.block-editor-writing-flow h6 {
+  font-size: 115%;
+}
+.block-editor-iframe__body .wp-block-buttons, .block-editor-iframe.block-editor-writing-flow .wp-block-buttons, .editor-styles-wrapper__body .wp-block-buttons, .editor-styles-wrapper.block-editor-writing-flow .wp-block-buttons {
+  margin: 1em 0;
+}
+.block-editor-iframe__body .wp-block-buttons .wp-block-button__link, .block-editor-iframe.block-editor-writing-flow .wp-block-buttons .wp-block-button__link, .editor-styles-wrapper__body .wp-block-buttons .wp-block-button__link, .editor-styles-wrapper.block-editor-writing-flow .wp-block-buttons .wp-block-button__link {
+  text-decoration: none;
+  border-radius: 0.3em;
+  padding: 0.8em 2em;
+  font-family: "Noto Sans JP", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  pointer-events: none;
+}
+.block-editor-iframe__body .wp-block-buttons .wp-block-button.is-style-fill .wp-block-button__link, .block-editor-iframe.block-editor-writing-flow .wp-block-buttons .wp-block-button.is-style-fill .wp-block-button__link, .editor-styles-wrapper__body .wp-block-buttons .wp-block-button.is-style-fill .wp-block-button__link, .editor-styles-wrapper.block-editor-writing-flow .wp-block-buttons .wp-block-button.is-style-fill .wp-block-button__link {
+  color: #FFF !important;
+  background: #172222;
+}
+.block-editor-iframe__body ul, .block-editor-iframe.block-editor-writing-flow ul, .editor-styles-wrapper__body ul, .editor-styles-wrapper.block-editor-writing-flow ul {
+  list-style: none;
+  margin: 1em 0;
+  list-style: disc;
+  padding: 0;
+}
+.block-editor-iframe__body ul li, .block-editor-iframe.block-editor-writing-flow ul li, .editor-styles-wrapper__body ul li, .editor-styles-wrapper.block-editor-writing-flow ul li {
+  margin: 0;
+  padding: 0;
+  margin-left: 1.5em;
+  margin-bottom: 0.3em;
+  font-size: 90%;
+}
+.block-editor-iframe__body ul li:last-child, .block-editor-iframe.block-editor-writing-flow ul li:last-child, .editor-styles-wrapper__body ul li:last-child, .editor-styles-wrapper.block-editor-writing-flow ul li:last-child {
+  margin-bottom: 0;
+}
+.block-editor-iframe__body ol, .block-editor-iframe.block-editor-writing-flow ol, .editor-styles-wrapper__body ol, .editor-styles-wrapper.block-editor-writing-flow ol {
+  list-style: none;
+  margin: 1em 0;
+  padding: 0;
+  list-style: decimal;
+}
+.block-editor-iframe__body ol li, .block-editor-iframe.block-editor-writing-flow ol li, .editor-styles-wrapper__body ol li, .editor-styles-wrapper.block-editor-writing-flow ol li {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 0.3em;
+  margin-left: 1.5em;
+  font-size: 90%;
+}
+.block-editor-iframe__body ol li:last-child, .block-editor-iframe.block-editor-writing-flow ol li:last-child, .editor-styles-wrapper__body ol li:last-child, .editor-styles-wrapper.block-editor-writing-flow ol li:last-child {
+  margin-bottom: 0;
+}
+.block-editor-iframe__body .wp-block-table, .block-editor-iframe.block-editor-writing-flow .wp-block-table, .editor-styles-wrapper__body .wp-block-table, .editor-styles-wrapper.block-editor-writing-flow .wp-block-table {
+  width: 100%;
+  max-width: 900px;
+}
+.block-editor-iframe__body .wp-block-table table, .block-editor-iframe.block-editor-writing-flow .wp-block-table table, .editor-styles-wrapper__body .wp-block-table table, .editor-styles-wrapper.block-editor-writing-flow .wp-block-table table {
+  margin: 0.5em 0 1em;
+  max-width: 100% !important;
+  min-width: 360px;
+  font-size: 90%;
+  font-family: "Noto Sans JP", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+}
+@media screen and (max-width: 860px) {
+  .block-editor-iframe__body .wp-block-table table, .block-editor-iframe.block-editor-writing-flow .wp-block-table table, .editor-styles-wrapper__body .wp-block-table table, .editor-styles-wrapper.block-editor-writing-flow .wp-block-table table {
+    min-width: 240px;
+    width: 100% !important;
+    table-layout: auto !important;
+  }
+}
+.block-editor-iframe__body .wp-block-table table th, .block-editor-iframe.block-editor-writing-flow .wp-block-table table th, .editor-styles-wrapper__body .wp-block-table table th, .editor-styles-wrapper.block-editor-writing-flow .wp-block-table table th {
+  background: #cccccc;
+  padding: 0.8em 1em;
+  line-height: 1.4;
+  font-weight: bold;
+  min-width: 80px;
+  border: #cccccc solid 1px;
+  word-break: break-all;
+  font-family: "Noto Sans JP", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+}
+.block-editor-iframe__body .wp-block-table table td, .block-editor-iframe.block-editor-writing-flow .wp-block-table table td, .editor-styles-wrapper__body .wp-block-table table td, .editor-styles-wrapper.block-editor-writing-flow .wp-block-table table td {
+  padding: 0.8em 1.5em 0.8em 1em;
+  line-height: 1.4;
+  border: #cccccc solid 1px;
+  word-break: break-all;
+}
+.block-editor-iframe__body .has-black-background-color, .block-editor-iframe.block-editor-writing-flow .has-black-background-color, .editor-styles-wrapper__body .has-black-background-color, .editor-styles-wrapper.block-editor-writing-flow .has-black-background-color {
+  background-color: #292220;
+}
+.block-editor-iframe__body .has-black-color, .block-editor-iframe.block-editor-writing-flow .has-black-color, .editor-styles-wrapper__body .has-black-color, .editor-styles-wrapper.block-editor-writing-flow .has-black-color {
+  color: #292220;
+}
+.block-editor-iframe__body .has-white-background-color, .block-editor-iframe.block-editor-writing-flow .has-white-background-color, .editor-styles-wrapper__body .has-white-background-color, .editor-styles-wrapper.block-editor-writing-flow .has-white-background-color {
+  background-color: #FFFFFF;
+}
+.block-editor-iframe__body .has-white-color, .block-editor-iframe.block-editor-writing-flow .has-white-color, .editor-styles-wrapper__body .has-white-color, .editor-styles-wrapper.block-editor-writing-flow .has-white-color {
+  color: #FFFFFF;
+}
+.block-editor-iframe__body .has-gray-background-color, .block-editor-iframe.block-editor-writing-flow .has-gray-background-color, .editor-styles-wrapper__body .has-gray-background-color, .editor-styles-wrapper.block-editor-writing-flow .has-gray-background-color {
+  background-color: #BBB2B4;
+}
+.block-editor-iframe__body .has-gray-color, .block-editor-iframe.block-editor-writing-flow .has-gray-color, .editor-styles-wrapper__body .has-gray-color, .editor-styles-wrapper.block-editor-writing-flow .has-gray-color {
+  color: #BBB2B4;
+}
+.block-editor-iframe__body .has-brown-background-color, .block-editor-iframe.block-editor-writing-flow .has-brown-background-color, .editor-styles-wrapper__body .has-brown-background-color, .editor-styles-wrapper.block-editor-writing-flow .has-brown-background-color {
+  background-color: #654B3D;
+}
+.block-editor-iframe__body .has-brown-color, .block-editor-iframe.block-editor-writing-flow .has-brown-color, .editor-styles-wrapper__body .has-brown-color, .editor-styles-wrapper.block-editor-writing-flow .has-brown-color {
+  color: #654B3D;
+}
+.block-editor-iframe__body .has-lightbrown-background-color, .block-editor-iframe.block-editor-writing-flow .has-lightbrown-background-color, .editor-styles-wrapper__body .has-lightbrown-background-color, .editor-styles-wrapper.block-editor-writing-flow .has-lightbrown-background-color {
+  background-color: #DDD2C8;
+}
+.block-editor-iframe__body .has-lightbrown-color, .block-editor-iframe.block-editor-writing-flow .has-lightbrown-color, .editor-styles-wrapper__body .has-lightbrown-color, .editor-styles-wrapper.block-editor-writing-flow .has-lightbrown-color {
+  color: #DDD2C8;
+}
+.block-editor-iframe__body .has-orange-background-color, .block-editor-iframe.block-editor-writing-flow .has-orange-background-color, .editor-styles-wrapper__body .has-orange-background-color, .editor-styles-wrapper.block-editor-writing-flow .has-orange-background-color {
+  background-color: #BA6A3F;
+}
+.block-editor-iframe__body .has-orange-color, .block-editor-iframe.block-editor-writing-flow .has-orange-color, .editor-styles-wrapper__body .has-orange-color, .editor-styles-wrapper.block-editor-writing-flow .has-orange-color {
+  color: #BA6A3F;
+}
+.block-editor-iframe__body .has-red-background-color, .block-editor-iframe.block-editor-writing-flow .has-red-background-color, .editor-styles-wrapper__body .has-red-background-color, .editor-styles-wrapper.block-editor-writing-flow .has-red-background-color {
+  background-color: #ff094c;
+}
+.block-editor-iframe__body .has-red-color, .block-editor-iframe.block-editor-writing-flow .has-red-color, .editor-styles-wrapper__body .has-red-color, .editor-styles-wrapper.block-editor-writing-flow .has-red-color {
+  color: #ff094c;
+}
+.block-editor-iframe__body .has-blue-background-color, .block-editor-iframe.block-editor-writing-flow .has-blue-background-color, .editor-styles-wrapper__body .has-blue-background-color, .editor-styles-wrapper.block-editor-writing-flow .has-blue-background-color {
+  background-color: #3F6CBA;
+}
+.block-editor-iframe__body .has-blue-color, .block-editor-iframe.block-editor-writing-flow .has-blue-color, .editor-styles-wrapper__body .has-blue-color, .editor-styles-wrapper.block-editor-writing-flow .has-blue-color {
+  color: #3F6CBA;
+}
+.block-editor-iframe__body .has-lightblue-background-color, .block-editor-iframe.block-editor-writing-flow .has-lightblue-background-color, .editor-styles-wrapper__body .has-lightblue-background-color, .editor-styles-wrapper.block-editor-writing-flow .has-lightblue-background-color {
+  background-color: #4492D6;
+}
+.block-editor-iframe__body .has-lightblue-color, .block-editor-iframe.block-editor-writing-flow .has-lightblue-color, .editor-styles-wrapper__body .has-lightblue-color, .editor-styles-wrapper.block-editor-writing-flow .has-lightblue-color {
+  color: #4492D6;
+}
+.block-editor-iframe__body .has-line-background-color, .block-editor-iframe.block-editor-writing-flow .has-line-background-color, .editor-styles-wrapper__body .has-line-background-color, .editor-styles-wrapper.block-editor-writing-flow .has-line-background-color {
+  background-color: #06c755;
+}
+.block-editor-iframe__body .has-line-color, .block-editor-iframe.block-editor-writing-flow .has-line-color, .editor-styles-wrapper__body .has-line-color, .editor-styles-wrapper.block-editor-writing-flow .has-line-color {
+  color: #06c755;
+}
+.block-editor-iframe__body .has-yellow-background-color, .block-editor-iframe.block-editor-writing-flow .has-yellow-background-color, .editor-styles-wrapper__body .has-yellow-background-color, .editor-styles-wrapper.block-editor-writing-flow .has-yellow-background-color {
+  background-color: #ffff75;
+}
+.block-editor-iframe__body .has-yellow-color, .block-editor-iframe.block-editor-writing-flow .has-yellow-color, .editor-styles-wrapper__body .has-yellow-color, .editor-styles-wrapper.block-editor-writing-flow .has-yellow-color {
+  color: #ffff75;
+}
+.block-editor-iframe__body .has-yellow2-background-color, .block-editor-iframe.block-editor-writing-flow .has-yellow2-background-color, .editor-styles-wrapper__body .has-yellow2-background-color, .editor-styles-wrapper.block-editor-writing-flow .has-yellow2-background-color {
+  background-color: #ffefda;
+}
+.block-editor-iframe__body .has-yellow-2-color, .block-editor-iframe.block-editor-writing-flow .has-yellow-2-color, .editor-styles-wrapper__body .has-yellow-2-color, .editor-styles-wrapper.block-editor-writing-flow .has-yellow-2-color {
+  color: #ffefda;
+}
+
+.wp-block {
+  max-width: 900px;
+}
+
+.wp-block-image .components-resizable-box__container {
+  height: auto !important;
+  max-width: 100% !important;
+}
+.edit-post-visual-editor {
+  background: #FFF;
+}
+
+.edit-post-visual-editor__post-title-wrapper .editor-post-title {
+  margin: 0 auto;
+}
+
+.mce-edit-area iframe body {
+  font-family: "Noto Sans JP", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  font-size: 100%;
+  color: #172222;
+  background: #FFF;
+  width: auto;
+  height: auto !important;
+  width: 100%;
+}

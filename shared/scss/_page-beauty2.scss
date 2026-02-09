@@ -6,7 +6,1039 @@
 /*==================================================================================================
 	ブライダル・トータルビューティー（宮田さん用）
 ==================================================================================================*/
-
-
+.-beauty {
+	.sec-about {
+		.about-list {
+			margin: 2em 0;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			li {
+				width: 32%;
+				border-radius: (1200vw/1920);
+				overflow: hidden;
+			}
+		}
+	}
+	.sec-feature {
+		.feature-list {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			li {
+				padding: (50em/16);
+				width: 48%;
+				margin-top: (80em/16);
+				position: relative;
+				@include mixin.max-screen(var.$screen-md) {
+					margin-top: (50em/16);
+					width: auto;
+					padding: (40em/16) (30em/16);
+				}
+				> *{
+					position: relative;
+					z-index: 1;
+				}
+				&:before {
+					content: "";
+					background: #FFF;
+					width: calc(100% - (60em/16));
+					height: 100%;
+					border-radius: 1.5em;
+					position: absolute;
+					left: (30em/16);
+					top: 0;
+					@include mixin.max-screen(var.$screen-md) {
+						border-radius: 1em;
+						width: calc(100% - (40em/16));
+						left: (20em/16);
+					}
+				}
+				&:after {
+					content: "";
+					background: #FFF;
+					width: 100%;
+					height: calc(100% - (60em/16));
+					border-radius: 1.5em;
+					position: absolute;
+					left: 0;
+					top: (30em/16);
+					@include mixin.max-screen(var.$screen-md) {
+						border-radius: 1em;
+						height: calc(100% - (40em/16));
+						top: (20em/16);
+					}
+				}
+			}
+			&__num {
+				font-family: "BIZ UDMincho", serif;
+				font-weight: bold;
+				background: #FFF;
+				border-radius: 50em;
+				font-size: (48em/16);
+				color: var.$beauty;
+				position: absolute !important;
+				top: 0;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				width: (100em/48);
+				line-height: (100em/48);
+				text-align: center;
+				@include mixin.max-screen(var.$screen-md) {
+					font-size: (32em/16);
+				}
+			}
+			&__ttl {
+				color: var.$beauty;
+				text-align: center;
+				line-height: 1.6;
+				font-family: "BIZ UDMincho", serif;
+				font-size: 140%;
+				font-weight: bold;
+				margin-bottom: 1.5em;
+			}
+			&__thumb {
+				margin-bottom: 1.5em;
+			}
+		}
+	}
+	.sec-employment {
+		.employment-list {
+			display: flex;
+			gap: 2%;
+			justify-content: center;
+			flex-wrap: wrap;
+			&__item {
+				width: 32%;
+				margin-top: 2%;
+				padding: clamp((40em/16),(6000vw/1920),(60em/16));
+				position: relative;
+				&:before{
+					content: "";
+					background: #FFF;
+					width: calc(100% - 3em);
+					height: 100%;
+					border-radius: 1em;
+					position: absolute;
+					left: 1.5em;
+					top: 0;
+				}
+				&:after{
+					content: "";
+					background: #FFF;
+					width: 100%;
+					height: calc(100% - 3em);
+					border-radius: 1em;
+					position: absolute;
+					left: 0;
+					top: 1.5em;
+				}
+				& > *{
+					position: relative;
+					z-index: 1;
+				}
+				@include mixin.max-screen(var.$screen-md) {
+					width: 100%;
+					margin-top: 1em;
+				}
+			}
+			&__ttl {
+				font-size: (18em/16);
+				font-weight: bold;
+				line-height: 1.5;
+				margin-bottom: 1em;
+			}
+			&__ul {
+				display: flex;
+				flex-direction: column;
+		    gap: 0.5em;
+				li {
+					padding-left: 1em;
+					position: relative;
+					&:before {
+						content: "";
+						width: 1em;
+						height: 1em;
+						position: absolute;
+						left: 0;
+						top: 50%;
+						margin-top: -0.5em;
+						background: url(../img/beauty/icon-kirakira.svg) no-repeat;
+						background-position: center;
+						background-size: contain;
+					}
+				}
+			}
+		}
+	}
+	.sec-schedule {
+		.schedule-area {
+			margin-top: 2em;
+			padding: clamp(1em, (8000vw/1440), (80em/16));
+			position: relative;
+			@include mixin.max-screen(var.$screen-md) {
+				padding: 8vw 4vw;
+			}
+			> * {
+				position: relative;
+				z-index: 1;
+			}
+			&:before {
+				content: "";
+				background: #FFF;
+				width: calc(100% - 6em);
+				height: 100%;
+				border-radius: 2em;
+				position: absolute;
+				left: 3em;
+				top: 0;
+				@include mixin.max-screen(var.$screen-md) {
+					width: calc(100% - 12vw);
+					left: 6vw;
+					border-radius: 6vw;
+				}
+			}
+			&:after {
+				content: "";
+				background: #FFF;
+				width: 100%;
+				height: calc(100% - 6em);
+				border-radius: 2em;
+				position: absolute;
+				left: 0;
+				top: 3em;
+				@include mixin.max-screen(var.$screen-md) {
+					height: calc(100% - 12vw);
+					top: 6vw;
+					border-radius: 6vw;
+				}
+			}
+			&__item {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 3%;
+				position: relative;
+				&:not(:first-child) {
+					padding-top: 3em;
+				}
+				&:before {
+					content: "";
+					position: absolute;
+					top: -1em;
+					bottom: -1px;
+					left: (55em/16);
+					background: var.$beauty;
+					width: (10em/16);
+					z-index: -1;
+					@include mixin.max-screen(var.$screen-md) {
+						width: (8em/16);
+						left: (31em/16);
+					}
+				}
+				&:first-child {
+					&:before {
+						top: 50%;
+					}
+				}
+				&:last-child {
+					&:before {
+						bottom: 50%;
+					}
+				}
+			}
+			&__time {
+				font-family: "BIZ UDMincho", serif;
+				font-weight: bold;
+				background: var.$beauty;
+				border-radius: 50em;
+				font-size: (24em/16);
+				color: #FFF;
+				width: (120em/24);
+				height: (120em/24);
+				line-height: 1;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+				@include mixin.max-screen(var.$screen-md) {
+					font-size: (16em/16);
+					line-height: 0.9;
+					width: (70em/16);
+					height: (70em/16);
+				}
+			}
+			&__info {
+				flex: 1;
+				&__ttl{
+					font-size: (18em/16);
+					font-weight: bold;
+					@include mixin.max-screen(var.$screen-md) {
+						font-size: (17em/16);
+					}
+				}
+				&__txt {
+					@include mixin.max-screen(var.$screen-md) {
+						font-size: (14em/16);
+						line-height: 1.6;
+					}
+				}
+			}
+			&__thumb {
+				width: 40%;
+				border-radius: 1.5vw;
+				overflow: hidden;
+			}
+		}
+	}
+	.sec-learn {
+		.learn-ttl {
+			text-align: center;
+			background: var.$beauty;
+			color: #FFF;
+			font-size: (28em/16);
+			padding: 0.25em;
+			font-weight: bold;
+			margin: 3em 0 1em;
+			font-family: "BIZ UDMincho", serif;
+		}
+		.first-list {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 4%;
+			@include mixin.max-screen(var.$screen-lg) {
+				justify-content: flex-start;
+			}
+			li {
+				width: 22%;
+				margin: 2% 0;
+				@include mixin.max-screen(var.$screen-lg) {
+					width: 48%;
+					margin: 4% 0;
+				}
+			}
+			&__thumb {
+				border-radius: 1.5vw;
+				overflow: hidden;
+				img {
+					width: 100%;
+				}
+			}
+			&__ttl {
+				margin-top: 1em;
+				text-align: center;
+				.en {
+					display: block;
+					font-family: "BIZ UDMincho", serif;
+					font-weight: bold;
+					font-size: (16em/16);
+					color: var.$beauty;
+					line-height: 1.2;
+					@include mixin.max-screen(var.$screen-lg) {
+						font-size: (14em/16);
+					}
+				}
+				.jp {
+					display: block;
+					text-align: center;
+					font-family: "BIZ UDMincho", serif;
+					font-size: (22em/16);
+					font-weight: bold;
+					@include mixin.max-screen(var.$screen-lg) {
+						font-size: (17em/16);
+					}
+				}
+			}
+			&__txt {
+				@include mixin.max-screen(var.$screen-lg) {
+					line-height: 1.8;
+					font-size: (14em/16);
+				}
+			}
+		}
+		.job-wrap-wide {
+			display: flex;
+			gap: 4%;
+			@include mixin.max-screen(var.$screen-md) {
+				flex-direction: column;
+			}
+			.job-wrap{
+				width: 48%;
+				margin-top: 1em;
+				background: rgba(var.$beauty2 ,0.1);
+				padding: clamp(1em,5vw,1.5em);
+				border-radius: 0.5em;
+				@include mixin.max-screen(var.$screen-md) {
+					width: 100%;
+				}
+				.ttl{
+					font-size: 106%;
+					font-weight: bold;
+					line-height: 1.5;
+					margin-bottom: 0.6em;
+				}
+				.job-list{
+					display: flex;
+					//flex-direction: column;
+					//gap: 0.5em;
+					flex-wrap: wrap;
+					align-items: flex-start;
+					li{
+						width: 50%;
+						line-height: 1.4;
+						font-size: 94%;
+						display: block;
+						padding-left: 1em;
+						padding-right: 1em;
+						position: relative;
+						margin-top: 0.5em;
+						&:before{
+							content: "";
+							width: 1em;
+							height: 1em;
+							position: absolute;
+							left: 0;
+							top: 0%;
+							margin-top: 0.25em;
+							background: url(../img/beauty/icon-kirakira.svg) no-repeat;
+							background-position: top;
+							background-size: contain;
+						}
+					}
+				}
+			}
+		}
+    .course-list{
+      margin-top: 2em;
+      display: flex;
+      gap: clamp(1em,2vw,2em);
+      &__item{
+        flex: 1;
+				padding: clamp(1em,2vw,2em);
+				position: relative;
+				&:before{
+					content: "";
+					background: #FFF;
+					width: calc(100% - 3em);
+					height: 100%;
+					border-radius: 1em;
+					position: absolute;
+					left: 1.5em;
+					top: 0;
+				}
+				&:after{
+					content: "";
+					background: #FFF;
+					width: 100%;
+					height: calc(100% - 3em);
+					border-radius: 1em;
+					position: absolute;
+					left: 0;
+					top: 1.5em;
+				}
+				& > *{
+					position: relative;
+					z-index: 1;
+				}
+				@include mixin.max-screen(var.$screen-sm) {
+					&:before{
+						width: calc(100% - 12vw);
+						left: 6vw;
+						border-radius: 6vw;
+					}
+					&:after{
+						height: calc(100% - 12vw);
+						top: 6vw;
+						border-radius: 6vw;
+					}
+				}
+				& > .ttl{
+					background: var.$beauty;
+					color: #FFF;
+					font-family: var.$serif-font2;
+					font-size: 120%;
+					line-height: 1.5;
+					padding: 0.5em 1em;
+					position: relative;
+					box-sizing: border-box;
+					display: block;
+					text-align: center;
+					width: 96%;
+					margin: 0 2% -0.6em;
+					z-index: 2;
+					&:before{
+						position: absolute;
+						content: '';
+						width: 0px;
+						height: 0px;
+						z-index: 1;
+						top: 0;
+						left: 0;
+						border-width: 1.3em 0px 1.3em 0.8em;
+						border-color: transparent transparent transparent #fff;
+						border-style: solid;
+					}
+					&:after{
+						position: absolute;
+						content: '';
+						width: 0px;
+						height: 0px;
+						z-index: 1;
+						top: 0;
+						right: 0;
+						border-width: 1.3em 0.8em 1.3em 0px;
+						border-color: transparent #fff transparent transparent;
+						border-style: solid;
+					}
+				}
+				.thumb{
+					margin-bottom: 1.2em;
+				}
+				.pink{
+					color: var.$beauty;
+					text-align: center;
+					line-height: 1.6;
+					font-family: var.$serif-font2;
+					font-size: 120%;
+					font-weight: bold;
+					margin-bottom: 0.5em;
+				}
+				.job-wrap{
+					margin-top: 1em;
+					background: rgba(var.$beauty2 ,0.1);
+					padding: clamp(1em,5vw,1.5em);
+					border-radius: 0.5em;
+					.ttl{
+						font-size: 106%;
+						font-weight: bold;
+						line-height: 1.5;
+						margin-bottom: 0.6em;
+					}
+					.job-list{
+						display: flex;
+						flex-direction: column;
+						gap: 0.5em;
+						li{
+							line-height: 1.4;
+							font-size: 94%;
+							display: block;
+							padding-left: 1em;
+							position: relative;
+							&:before{
+								content: "";
+								width: 1em;
+								height: 1em;
+								position: absolute;
+								left: 0;
+								top: 50%;
+								margin-top: -0.5em;
+								background: url(../img/beauty/icon-kirakira.svg) no-repeat;
+								background-position: center;
+								background-size: contain;
+							}
+						}
+					}
+				}
+      }
+			@include mixin.max-screen(var.$screen-lg) {
+				flex-direction: column;
+				gap: clamp(1em,5vw,2em);
+				&__item{
+					padding: clamp(1em,5vw,2em) clamp(1em,5vw,2em) clamp(1em,8vw,3em);
+					& > .ttl{
+						max-width: 20em;
+						margin-left: auto;
+						margin-right: auto;
+					}
+					.thumb{
+						max-width: 500px;
+						width: 100%;
+						margin: 0 auto 1.5em;
+					}
+					& > p{
+						text-align: center;
+					}
+				}
+			}
+			@include mixin.max-screen(var.$screen-xs) {
+				&__item{
+					.pink{
+						br{
+							display: none;
+						}
+					}
+					& > p{
+						text-align: left;
+					}
+				}
+			}
+    }
+		.beauty-frame{
+			padding: clamp(1em,10vw,4em) clamp(1em,5vw,3em);
+			position: relative;
+			&:before{
+				content: "";
+				background: #FFF;
+				width: calc(100% - 6em);
+				height: 100%;
+				border-radius: 2em;
+				position: absolute;
+				left: 3em;
+				top: 0;
+			}
+			&:after{
+				content: "";
+				background: #FFF;
+				width: 100%;
+				height: calc(100% - 6em);
+				border-radius: 2em;
+				position: absolute;
+				left: 0;
+				top: 3em;
+			}
+			& > *{
+				position: relative;
+				z-index: 1;
+			}
+			@include mixin.max-screen(var.$screen-sm) {
+				&:before{
+					width: calc(100% - 12vw);
+					left: 6vw;
+					border-radius: 6vw;
+				}
+				&:after{
+					height: calc(100% - 12vw);
+					top: 6vw;
+					border-radius: 6vw;
+				}
+			}
+		}
+		.curriculum-wrap{
+			display: flex;
+			align-items: center;
+			gap: 2em;
+			.thumb{
+				flex: 1;
+			}
+			.text-wrap{
+				flex: 1;
+				display: flex;
+				flex-direction: column;
+				gap: 1em;
+			}
+			@include mixin.max-screen(var.$screen-lg) {
+				flex-direction: column;
+				.thumb{
+					max-width: 500px;
+					width: 100%;
+					margin: 0 auto;
+				}
+			}
+		}
+	}
+	.sec-voice {
+    .course-list{
+      margin-top: 2em;
+      display: flex;
+      gap: clamp(1em,2vw,2em);
+      &__item{
+        flex: 1;
+				padding: clamp(1em,2vw,2em);
+				position: relative;
+				&:before{
+					content: "";
+					background: #FFF;
+					width: calc(100% - 3em);
+					height: 100%;
+					border-radius: 1em;
+					position: absolute;
+					left: 1.5em;
+					top: 0;
+				}
+				&:after{
+					content: "";
+					background: #FFF;
+					width: 100%;
+					height: calc(100% - 3em);
+					border-radius: 1em;
+					position: absolute;
+					left: 0;
+					top: 1.5em;
+				}
+				& > *{
+					position: relative;
+					z-index: 1;
+				}
+				@include mixin.max-screen(var.$screen-sm) {
+					&:before{
+						width: calc(100% - 12vw);
+						left: 6vw;
+						border-radius: 6vw;
+					}
+					&:after{
+						height: calc(100% - 12vw);
+						top: 6vw;
+						border-radius: 6vw;
+					}
+				}
+				& > .ttl{
+					background: var.$beauty;
+					color: #FFF;
+					font-family: var.$serif-font2;
+					font-size: 120%;
+					line-height: 1.5;
+					padding: 0.5em 1em;
+					position: relative;
+					box-sizing: border-box;
+					display: block;
+					text-align: center;
+					width: 96%;
+					margin: 0 2% 1em;
+					z-index: 2;
+					&.bridal {
+						background: #F5B2B2;
+					} 
+					&.esthe {
+						background: #B7C4E5;
+					} 
+					&.make {
+						background: #E3B2D1;
+					} 
+					&:before{
+						position: absolute;
+						content: '';
+						width: 0px;
+						height: 0px;
+						z-index: 1;
+						top: 0;
+						left: 0;
+						border-width: 1.3em 0px 1.3em 0.8em;
+						border-color: transparent transparent transparent #fff;
+						border-style: solid;
+					}
+					&:after{
+						position: absolute;
+						content: '';
+						width: 0px;
+						height: 0px;
+						z-index: 1;
+						top: 0;
+						right: 0;
+						border-width: 1.3em 0.8em 1.3em 0px;
+						border-color: transparent #fff transparent transparent;
+						border-style: solid;
+					}
+				}
+				.thumb{
+					margin-bottom: 0.5em;
+					margin-top: 1.5em;
+				}
+				p {
+					text-align: center;
+					line-height: 1.6;
+					span {
+						display: block;
+						font-weight: bold;
+						font-size: 1.2em;
+					}
+				}
+      }
+			@include mixin.max-screen(var.$screen-lg) {
+				flex-direction: column;
+				gap: clamp(1em,5vw,2em);
+				&__item{
+					padding: clamp(1em,5vw,2em) clamp(1em,5vw,2em) clamp(1em,8vw,3em);
+					& > .ttl{
+						max-width: 20em;
+						margin-left: auto;
+						margin-right: auto;
+					}
+					.thumb{
+						max-width: 500px;
+						width: 100%;
+					}
+					& > p{
+						text-align: center;
+					}
+				}
+			}
+			@include mixin.max-screen(var.$screen-xs) {
+				&__item{
+					.pink{
+						br{
+							display: none;
+						}
+					}
+					& > p{
+					}
+				}
+			}
+    }
+	}
+	.sec-support {
+		.beauty-frame{
+			padding: clamp(1em,10vw,4em) clamp(1em,5vw,3em);
+			position: relative;
+			&:before{
+				content: "";
+				background: #FFF;
+				width: calc(100% - 6em);
+				height: 100%;
+				border-radius: 2em;
+				position: absolute;
+				left: 3em;
+				top: 0;
+			}
+			&:after{
+				content: "";
+				background: #FFF;
+				width: 100%;
+				height: calc(100% - 6em);
+				border-radius: 2em;
+				position: absolute;
+				left: 0;
+				top: 3em;
+			}
+			& > *{
+				position: relative;
+				z-index: 1;
+			}
+			@include mixin.max-screen(var.$screen-sm) {
+				&:before{
+					width: calc(100% - 12vw);
+					left: 6vw;
+					border-radius: 6vw;
+				}
+				&:after{
+					height: calc(100% - 12vw);
+					top: 6vw;
+					border-radius: 6vw;
+				}
+			}
+		}
+		.support-img {
+			max-width: 800px;
+			margin: 0 auto 2em;
+		}
+		.support-read {
+			text-align: center;
+			margin: 0 auto 2em;
+		}
+		.support-list {
+			display: flex;
+			gap: 2%;
+			justify-content: center;
+			flex-wrap: wrap;
+			li {
+				width: 32%;
+				margin-top: 2%;
+				padding: clamp((30em/16),(5000vw/1920),(35em/16));
+				position: relative;
+				&:before{
+					content: "";
+					background: #FFF;
+					width: calc(100% - 3em);
+					height: 100%;
+					border-radius: 1em;
+					position: absolute;
+					left: 1.5em;
+					top: 0;
+				}
+				&:after{
+					content: "";
+					background: #FFF;
+					width: 100%;
+					height: calc(100% - 3em);
+					border-radius: 1em;
+					position: absolute;
+					left: 0;
+					top: 1.5em;
+				}
+				& > *{
+					position: relative;
+					z-index: 1;
+				}
+				@include mixin.max-screen(var.$screen-md) {
+					width: 100%;
+					margin-top: 1em;
+				}
+			}
+			&__ttl {
+				font-size: (20em/16);
+				font-weight: bold;
+				text-align: center;
+				font-family: "BIZ UDMincho", serif;
+				color: var.$beauty;
+				line-height: 1.5;
+				margin-bottom: 0.5em;
+			}
+		}
+	}
+	.sec-company {
+		.company-logo {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			max-width: 900px;
+			margin: 0 auto;
+			background: #FFF;
+			padding: (10em/16);
+			border-radius: 1.5vw;
+			li {
+				padding: (10em/16);
+				img {
+					height: (40em/16);
+				}
+			}
+		}
+		.company-list {
+			display: flex;
+			gap: 2%;
+			justify-content: center;
+			flex-wrap: wrap;
+			&__item {
+				width: 32%;
+				margin-top: 2%;
+				padding: clamp((30em/16),(4000vw/1920),(40em/16));
+				position: relative;
+				&:before{
+					content: "";
+					background: #FFF;
+					width: calc(100% - 3em);
+					height: 100%;
+					border-radius: 1em;
+					position: absolute;
+					left: 1.5em;
+					top: 0;
+				}
+				&:after{
+					content: "";
+					background: #FFF;
+					width: 100%;
+					height: calc(100% - 3em);
+					border-radius: 1em;
+					position: absolute;
+					left: 0;
+					top: 1.5em;
+				}
+				& > *{
+					position: relative;
+					z-index: 1;
+				}
+				@include mixin.max-screen(var.$screen-md) {
+					width: 100%;
+					margin-top: 1em;
+				}
+			}
+			&__ttl {
+				font-size: (20em/16);
+				font-weight: bold;
+				line-height: 1.5;
+				margin-bottom: 1em;
+				text-align: center;
+				font-family: "BIZ UDMincho", serif;
+				color: var.$beauty;
+			}
+			&__ul {
+				display: flex;
+				flex-direction: column;
+		    gap: 0.75em;
+				li {
+					padding-left: 1em;
+					position: relative;
+					line-height: 1.5;
+					&:before {
+						content: "";
+						width: 1em;
+						height: 1em;
+						position: absolute;
+						left: 0;
+						top: 0%;
+						margin-top: 0.25em;
+						background: url(../img/beauty/icon-kirakira.svg) no-repeat;
+						background-position: center;
+						background-size: contain;
+					}
+				}
+			}
+		}
+	}
+	.sec-faq {
+		.faq-list {
+			transition: .3s;
+			max-width: 1200px;
+			width: 80%;
+			margin: 2em auto 0;
+			background: #FFF;
+			border-radius: 1em;
+			@include mixin.max-screen(var.$screen-sm) {
+					width: auto;
+			}
+			&[open] {
+					.faq-list__head {
+							&:after {
+									background-image: url(../img/common/minus.svg);
+							}
+					}
+			}
+			&__head {
+					font-size: (20em/16);
+					padding: (30em/20) (50em/20) (30em/20) (100em/20);
+					width: auto;
+					position: relative;
+					font-weight: bold;
+					cursor: pointer;
+					color: var.$beauty;
+					@include mixin.max-screen(var.$screen-xs) {
+							padding: (30em/20) (50em/20) (30em/20) (60em/20);
+							font-size: (14em/12);
+					}
+					&:before {
+							content: "Q";
+							font-family: var.$serif-font;
+							font-weight: bold;
+							font-size: (30em/20);
+							position: absolute;
+							top: 0.6em;
+							left: 1.5em;
+							@include mixin.max-screen(var.$screen-xs) {
+									left: 0.75em;
+							}
+					}
+					&:after {
+							content: "";
+							width: (20em/20);
+							height: (20em/20);
+							position: absolute;
+							right: (20em/20);
+							transform: translate(0,-50%);
+							top: 50%;
+							background: url(../img/common/plus.svg) no-repeat;
+							background-position: center;
+					}
+			}
+			&__body {
+					font-size: (18em/16);
+					padding: (0/18) (50em/18) (30em/18) (100em/18);
+					margin-top: 0;
+					position: relative;
+					font-weight: 500;
+					white-space: pre-wrap;
+					@include mixin.max-screen(var.$screen-xs) {
+							padding: 0 (25em/18) (20em/18);
+							font-size: (13em/12);
+					}
+					a {
+							text-decoration: underline;
+							//color: $gre;
+							&:hover {
+									text-decoration: none;
+							}
+					}
+			}
+	  }
+	}
+}
 
 
