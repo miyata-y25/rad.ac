@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=BIZ+UDMincho&family=Bebas+Neue&family=Cormorant+Infant:ital,wght@0,300..700;1,300..700&family=Montserrat:wght@100..900&family=Noto+Sans+JP:wght@100..900&family=Zen+Maru+Gothic:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=BIZ+UDMincho&family=Bebas+Neue&family=Cormorant+Infant:ital,wght@0,300..700;1,300..700&family=Montserrat:wght@100..900&family=Noto+Sans+JP:wght@100..900&family=Zen+Maru+Gothic:wght@500;700&family=M+PLUS+1:wght@100..900&family=Teko:wght@300..700&display=swap");
 html {
   -ms-text-size-adjust: 100% !important;
   -webkit-text-size-adjust: 100% !important;
@@ -1362,6 +1362,10 @@ header .sp_menu > ul > li .child_menu a {
   color: #ffff00;
 }
 
+.-white {
+  color: #FFF;
+}
+
 .-center {
   text-align: center;
 }
@@ -1567,6 +1571,53 @@ header .sp_menu > ul > li .child_menu a {
 }
 .btnArea .basicBtn.-brown:hover {
   background: rgb(170.4741035857, 131.5258964143, 140.6414342629);
+}
+.btnArea .basicBtn.-black {
+  background: #172222;
+  color: #FFF;
+}
+.btnArea .basicBtn.-black:after {
+  background-image: url("../img/common/icon-arrow-circle-white.svg");
+  -webkit-filter: none;
+          filter: none;
+  width: 2em;
+}
+.btnArea .basicBtn.-black:hover {
+  opacity: 0.8;
+}
+.btnArea .basicBtn.-white {
+  background: #FFF;
+  border: 2px solid #172222;
+  color: #172222;
+  font-weight: bold;
+  position: relative;
+}
+.btnArea .basicBtn.-white:before {
+  content: "";
+  background: #172222;
+  border-radius: 50em;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border: 2px solid #172222;
+  z-index: -1;
+}
+.btnArea .basicBtn.-white:after {
+  background-image: url("../img/common/icon-arrow-circle-red.svg");
+  -webkit-filter: none;
+          filter: none;
+}
+.btnArea .basicBtn.-white.cur, .btnArea .basicBtn.-white:hover {
+  top: 2px;
+  left: 2px;
+  background: #ea553a;
+  color: #FFF;
+}
+.btnArea .basicBtn.-white.cur:before, .btnArea .basicBtn.-white:hover:before {
+  top: 0;
+  left: 0;
 }
 
 /*==================================================================================================

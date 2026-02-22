@@ -63,6 +63,9 @@
 .-yellow {
   color: var.$yellow;
 }
+.-white {
+  color: #FFF;
+}
 .-center {
   text-align: center;
 }
@@ -237,6 +240,52 @@
       background: var.$brown-text;
       &:hover{
         background: lighten(var.$brown-text, 10%);
+      }
+    }
+    &.-black{
+      background: var.$text;
+      color: #FFF;
+      &:after {
+        background-image: url("../img/common/icon-arrow-circle-white.svg");
+        filter: none;
+        width: (32em/16);
+      }
+      &:hover {
+        opacity: .8;
+      }
+    }
+    &.-white{
+      background: #FFF;
+      border: 2px solid var.$text;
+      color: var.$text;
+      font-weight: bold;
+      position: relative;
+      &:before {
+        content: "";
+        background: var.$text;
+        border-radius: 50em;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        border: 2px solid var.$text;
+        z-index: -1;
+      }
+      &:after {
+        background-image: url("../img/common/icon-arrow-circle-red.svg");
+        filter: none;
+      }
+      &.cur,
+      &:hover{
+        top: 2px;
+        left: 2px;
+        background: var.$illustration;
+        color: #FFF;
+        &:before {
+          top: 0;
+          left: 0;
+        }
       }
     }
   }
