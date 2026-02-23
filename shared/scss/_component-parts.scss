@@ -288,6 +288,34 @@
         }
       }
     }
+    &.-hair{
+      background: var.$text;
+      color: #FFF;
+      text-align: left;
+      font-weight: bold;
+      &:after {
+        background-image: url("../img/common/icon-arrow-white.svg");
+        filter: none;
+        width: (8em/16);
+        right: 1.5em;
+      }
+      &:hover {
+        opacity: .8;
+      }
+    }
+    &.-hair2{
+      background: var.$text;
+      color: #FFF;
+      text-align: left;
+      font-weight: bold;
+      &:after {
+        background-image: url("../img/common/icon-arrow-circle-white2.svg");
+        filter: none;
+      }
+      &:hover {
+        opacity: .8;
+      }
+    }
   }
 
 

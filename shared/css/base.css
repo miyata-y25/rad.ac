@@ -1619,6 +1619,36 @@ header .sp_menu > ul > li .child_menu a {
   top: 0;
   left: 0;
 }
+.btnArea .basicBtn.-hair {
+  background: #172222;
+  color: #FFF;
+  text-align: left;
+  font-weight: bold;
+}
+.btnArea .basicBtn.-hair:after {
+  background-image: url("../img/common/icon-arrow-white.svg");
+  -webkit-filter: none;
+          filter: none;
+  width: 0.5em;
+  right: 1.5em;
+}
+.btnArea .basicBtn.-hair:hover {
+  opacity: 0.8;
+}
+.btnArea .basicBtn.-hair2 {
+  background: #172222;
+  color: #FFF;
+  text-align: left;
+  font-weight: bold;
+}
+.btnArea .basicBtn.-hair2:after {
+  background-image: url("../img/common/icon-arrow-circle-white2.svg");
+  -webkit-filter: none;
+          filter: none;
+}
+.btnArea .basicBtn.-hair2:hover {
+  opacity: 0.8;
+}
 
 /*==================================================================================================
 	サイト基礎

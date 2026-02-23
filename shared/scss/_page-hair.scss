@@ -8,6 +8,7 @@
 ==================================================================================================*/
 
 .-hair {
+	background: #FFF;
 	color: var.$text;
 
 	.hairPageLabel{
@@ -17,26 +18,37 @@
 		padding-left: 0;
 		padding-right: 0;
 		padding-bottom: 3vw;
-		min-height: 22em;
 		display: flex;
     align-items: center;
-		height: (70000vw/1920);
+		min-height: 22em;
 		@include mixin.max-screen(var.$screen-xs) {
-			padding-top: clamp(5em,24vw,6.5em);
+			height: 15em;
+			padding-top: 8em;
+			padding-bottom: 2em;
+		}
+		&.-top {
+			height: (70000vw/1920);
+			@include mixin.max-screen(var.$screen-xs) {
+				height: (30000vw/480);
+				padding-top: clamp(5em,24vw,6.5em);
+			}
+		}
+		@include mixin.max-screen(var.$screen-xs) {
 			min-height: auto;
-			height: (30000vw/480);
 		}
 		&__main{
 			color: #FFF;
 			position: relative;
 			z-index: 2;
 			margin-left: 5%;
-			width: percentage(740/1920);
 			@include mixin.max-screen(var.$screen-md) {
 				margin-left: 15px;
-				width: 55%;
 			}
-			p{
+			&.-top {
+				width: percentage(740/1920);
+				@include mixin.max-screen(var.$screen-md) {
+					width: 55%;
+				}
 			}
 			.sub {
 				font-family: var.$num-font;
@@ -77,19 +89,16 @@
 			position: absolute;
 			right: 0;
 			bottom: 0;
-			width: percentage(928/1920);
 			height: 100%;
 			z-index: 1;
+			padding-top: 3em;
 			@include mixin.max-screen(var.$screen-md) {
 			}
 			@include mixin.max-screen(var.$screen-sm) {
 				width: 70%;
 			}
 			&.-top {
-				img {
-					@include mixin.max-screen(var.$screen-lg) {
-					}
-				}
+				width: percentage(928/1920);
 			}
 			img{
 				object-fit: contain;
@@ -143,30 +152,22 @@
 		&.-pb0 {
 			padding-bottom: 0;
 		}
-		&.-red {
-			background: #FF857B;
-			background: url("../img/illustration/red-bg.png") repeat;
-			background-size: 253px auto;
-			@include mixin.max-screen(var.$screen-md) {
-				background-size: (180em/16) auto;
-			}
+		&.-pt0 {
+			padding-top: 0;
+		}
+		&.-gray {
+			background: url(../img/hair/bg_gray.webp) no-repeat;
+			background-size: cover;
+			background-position: top center;
+		}
+		&.-aqua {
+			background: var.$hair;
+			color: #FFF;
 			.sec__ttl {
 				color: #FFF;
-				.bg {
-					-webkit-text-stroke: 1px #FFF;
-					text-stroke: 1px #FFF;
+				&:after {
+					background: #FFF;
 				}
-			}
-			.illustration-frame {
-				.sec__ttl {
-					color: var.$illustration;
-				}
-			}
-		}
-		&.-ptSlider {
-			padding-top: calc((27000vw/1920) + 6em);
-			@include mixin.max-screen(var.$screen-md) {
-				padding-top: calc((18000vw/768) + 3em);
 			}
 		}
 	}
@@ -174,55 +175,106 @@
 	.btnArea{
 		text-align: center;
 		.basicBtn{
-			min-width: 300px;
-			text-align: center;
+			min-width: 200px;
 			display: inline-block;
 			max-width: 100%;
-			padding: 1.4em 5.4em 1.4em 3em;
-			margin-right: 1em;
-			@include mixin.max-screen(var.$screen-md) {
+			padding: 1.4em 5.4em 1.4em 2em;
+			margin-right: 0.3em;
+			margin-left: 0.3em;
+			@include mixin.max-screen(var.$screen-lg) {
 				display: block;
 				margin-bottom: 1em;
 			}
+			&.-wide {
+				max-width: 375px;
+				width: 80%;
+				margin-left: auto;
+				margin-right: auto;
+			}
 		}
 	}
-
-	.illustration-frame {
-		background: var.$text;
-		border-radius: 0.5em;
-		position: relative;
-		&__inner {
-			background-color: #FFF;
-			background-image: url("../img/illustration/icon-ster2.svg") ,url("../img/illustration/icon-ster2.svg") ,url("../img/illustration/icon-ster2.svg") ,url("../img/illustration/icon-ster2.svg");
-			background-size: (18em/16) auto;
-			background-position: top 1em left 1em , top 1em right 1em , bottom 1em left 1em , bottom 1em right 1em;
-			background-repeat: no-repeat;
-			border: 2px solid var.$text;
-			border-radius: 0.5em;
-			padding: clamp(1em, 10vw, 4em) clamp(1em, 5vw, 3em);
-			position: relative;
-			z-index: 0;
-			height: 100%;
-			top: -6px;
-			left: -6px;
+	
+	.grid {
+		display: flex;
+		flex-wrap: wrap;
+		&.--3 {
+			gap: 2em (4%/2);
+			@include mixin.max-screen(var.$screen-md) {
+				gap: 1em (4%/2);
+			}
+			> * {
+				@include mixin.min-screen(var.$screen-md + 1) {
+					width: 32%;
+				}
+				@include mixin.max-screen(var.$screen-md) {
+					width: 49%;
+				}
+			}
+			@include mixin.max-screen(var.$screen-md) {
+				&.--wide {
+					flex-direction: column;
+					> * {
+						width: auto;
+					}
+				}
+			}
+		}
+		&.--4 {
+			gap: 2em (8%/3);
+			@include mixin.max-screen(var.$screen-lg) {
+				flex-direction: column;
+			}
+			> * {
+				@include mixin.min-screen(var.$screen-lg + 1) {
+					width: 23%;
+				}
+			}
+			&.--near {
+				gap: 1em (4%/3);
+				@include mixin.max-screen(var.$screen-lg) {
+					flex-direction: row;
+				}
+				@include mixin.max-screen(var.$screen-md) {
+					gap: 1em 2%;
+				}
+				> * {
+					@include mixin.min-screen(var.$screen-md + 1) {
+						width: 24%;
+					}
+					@include mixin.max-screen(var.$screen-md) {
+						width: 49%;
+					}
+				}
+			}
 		}
 	}
 
 	.sec {
 		position: relative;
 		&__ttl {
-			line-height: 1.4;
-			font-weight: 800;
-			font-size: clamp((24em/13),(4800vw/1440),(48em/16));
+			line-height: 1.2;
+			font-weight: 700;
+			font-size: clamp((28em/13),(5600vw/1440),(56em/16));
 			margin-bottom: 0.5em;
-			color: var.$illustration;
+			padding-bottom: 0.75em;
+			color: var.$navy;
 			text-align: center;
 			position: relative;
+			&:after {
+				content: "";
+				background: var.$navy;
+				width: (123em/56);
+				height: 2px;
+				position: absolute;
+				bottom: 0%;
+				left: 50%;
+				transform: translate(-50%,0);
+			}
 			.-black {
 				color: var.$text;
 			}
 			.-small {
-				font-size: (32em/48);
+				font-size: (32em/56);
 			}
 			.bg {
 				position: absolute;
@@ -250,265 +302,282 @@
 		}
 		&__txt {
 		}
-		&.--intro {
+		&.--btns {
 			padding-bottom: 0;
-			.slider-list{
-				margin-top: 6em;
-				margin-bottom: (-27000vw/1920);
-				@include mixin.max-screen(var.$screen-md) {
-					margin-bottom: (-18000vw/768);
-				}
-				.slick-list{
-					overflow:visible;
-				}
-				.slick-slide{
-					padding: 0 0.6em;
-				}
-			}
-		}
-		&.--course {
-			.sec__ttl {
-				color: #FFF;
-			}
-		}
-		&.--work {
-			display: flex;
-			align-items: center;
-			padding: 3em 0;
 			@include mixin.max-screen(var.$screen-lg) {
-				display: block;
-				padding: 0;
-			}
-			.work-thumb {
-				width: percentage(1120/1920);
-				@include mixin.max-screen(var.$screen-lg) {
-					width: 90%;
-					margin: 0 auto -30vw;
-				}
-			}
-			.work-area {
-				width: percentage(800/1920);
-				background: #FF857B;
-				background: url("../img/illustration/red-bg.png") repeat;
-				background-size: 253px auto;
-				padding: clamp((30em/13),(8000vw/1920),(80em/16)) 2em;
-				@include mixin.max-screen(var.$screen-lg) {
-					width: 100%;
-					padding: calc(2em + 30vw) 20px 3em;
-				}
-				@include mixin.max-screen(var.$screen-md) {
-					background-size: (180em/16) auto;
-				}
-				.sec__ttl .bg {
-					-webkit-text-stroke: 1px #FFF;
-					text-stroke: 1px #FFF;
-				}
-			}
-			.sec__ttl {
-				color: #FFF;
-				font-size: clamp((24em/13),(4800vw/1920),(48em/16));
-			}
-			.sec__read {
-				font-size: clamp((16em/13),(2000vw/1920),(20em/16));
-			}
-			.sec__txt {
-				font-size: clamp((14em/16),(1600vw/1920),(16em/16));
-			}
-		}
-		&.--info{
-			.inner{
-				display: flex;
-				gap: 4%;
-				.illustration-frame {
-					width: 100%;
-					&__inner {
-						display: flex;
-						flex-direction: column;
-						justify-content: center;
-						align-items: center;
-					}
-				}
-			}
-			@include mixin.max-screen(var.$screen-lg) {
-				.inner{
-					flex-direction: column;
-					gap: 2em;
-				}
-			}
-		}
-	}
-
-	.curriculum-area {
-		background: #FFF;
-		border: 2px solid var.$text;
-		padding: clamp(1em, 10vw, 4em) clamp(1em, 5vw, 3em);
-	}
-	.curriculum-wrap{
-		margin-top: 2em;
-		display: flex;
-		align-items: center;
-		gap: 2em;
-		.thumb{
-			flex: 1;
-		}
-		.text-wrap{
-			flex: 1;
-			display: flex;
-			flex-direction: column;
-			gap: 1em;
-			&__item{
-				border-radius: 1em;
-				background: rgba(var.$illustration, .1);
-				padding: clamp(0.5em,2vw,1em);
-				display: flex;
-				align-items: center;
-				gap: 1em;
-				.ttl{
-					width: (88em/18);
-					height: (88em/18);
-					border-radius: 5em;
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					background: var.$illustration;
-					color: #FFF;
-					font-weight: bold;
-					font-size: (18em/16);
-				}
-				.text{
-					flex: 1;
-					p{
-						font-size: clamp((16em/13),(2400vw/1440),(24em/16));
-						font-weight: 500;
-						line-height: 1.4;
-					}
-				}
-				.tagList{
-					display: flex;
-					flex-wrap: wrap;
-					gap: 0.5em;
-					margin-top: 1em;
-					li{
-						border-radius: 2em;
-						background: var.$beauty;
-						color: #FFF;
-						line-height: 1;
-						padding: 0.4em 1em;
-						font-size: 90%;
-					}
-				}
-			}
-		}
-		@include mixin.max-screen(var.$screen-lg) {
-			flex-direction: column;
-			.thumb{
-				max-width: 500px;
-				width: 100%;
-				margin: 0 auto;
-			}
-		}
-	}
-
-	.course-list{
-		margin-top: 2em;
-		display: flex;
-		gap: clamp(1em,2vw,2em);
-		&__item{
-			flex: 1;
-			padding: 0;
-			position: relative;
-			background: #FFF;
-			border: 2px solid var.$text;
-			border-radius: 0.5em;
-			overflow: hidden;
-			& > .ttl{
-				background: var.$illustration;
-				color: #FFF;
-				font-size: clamp((18em/13),(3200vw/1440),(32em/16));
-				line-height: 1.5;
-				padding: 0.5em 1em;
-				font-weight: 800;
-				position: relative;
-				text-align: center;
-				z-index: 2;
-			}
-			.thumb{
-			}
-			.cont {
-				padding: clamp(1em,2vw,2em);
-			}
-			.sub{
-				color: var.$illustration;
-				text-align: center;
-				line-height: 1.6;
-				font-size: clamp((18em/13),(2400vw/1440),(24em/16));
-				font-weight: bold;
-				margin-bottom: 0.5em;
-			}
-			.job-wrap{
-				margin-top: 1em;
-				background: rgba(var.$illustration, .1);
-				padding: clamp(1em,5vw,1.5em);
-				border-radius: 0.5em;
-				color: var.$illustration;
-				.ttl{
-					font-size: (18em/16);
-					font-weight: bold;
-					line-height: 1.5;
-					margin-bottom: 0.6em;
-				}
-				.job-list{
-					display: flex;
-					flex-direction: column;
-					gap: 0.5em;
-					li{
-						line-height: 1.4;
-						font-size: (14em/16);
-						font-weight: 500;
-						display: block;
-						padding-left: 1.5em;
-						position: relative;
-						&:before{
-							content: "";
-							width: (15em/14);
-							height: (15em/14);
-							position: absolute;
-							left: 0;
-							top: 50%;
-							margin-top: -0.5em;
-							background: url(../img/illustration/icon-ster.svg) no-repeat;
-							background-position: center;
-							background-size: contain;
+				font-size: (12em/13);
+				padding-top: 1.5em;
+				.btnArea {
+					.basicBtn {
+						width: 46%;
+						min-width: 0;
+						display: inline-block;
+						padding: 1em;
+						&:after {
+							right: 1em;
 						}
 					}
 				}
 			}
 		}
-		@include mixin.max-screen(var.$screen-lg) {
-			flex-direction: column;
-			gap: clamp(1em,5vw,2em);
-			&__item{
-				.thumb{
-					max-width: 500px;
-					width: 100%;
-					margin: 0 auto;
-				}
-				& > p{
-					text-align: center;
+		&.--intro {
+			background: url(../img/hair/intro_bg.webp) no-repeat;
+			background-position: right bottom;
+			background-size: auto 100%;
+		}
+		&.--curriculum {
+			background: url(../img/hair/curriculum_bg.webp) no-repeat;
+			background-position: center top;
+			background-size: cover;
+			padding-top: (26000vw/1920);
+			padding-bottom: 4em;
+			margin-top: 0;
+			@include mixin.max-screen(var.$screen-lg) {
+				background-image: url(../img/hair/curriculum_bg_sp.webp);
+				padding-top: (16000vw/1080);
+			}
+			.sec__ttl {
+				color: #FFF;
+				&:after {
+					background: #FFF;
 				}
 			}
 		}
-		@include mixin.max-screen(var.$screen-xs) {
-			&__item{
-				.pink{
-					br{
-						display: none;
+		&.--reason {
+		}
+		&.--info {
+			.reason-list {
+				gap: 0;
+				&__item {
+					margin-top: 0;
+					color: #FFF;
+					width: 50%;
+					padding: clamp((20em/13),(10000vw/1920),(100em/16)) clamp((20em/13),(22000vw/1920),(220em/16));
+					display: flex;
+					flex-direction: column;
+					@include mixin.max-screen(var.$screen-lg) {
+						padding: (30em/13) clamp((20em/13),(10000vw/1920),(100em/16));
+						width: 100%;
+					}
+					.sec__ttl {
+						color: #FFF;
+						&:after {
+							background: #FFF;
+						}
+					}
+					.sec__txt {
+						margin-bottom: 2em;
+					}
+					.btnArea {
+						margin-top: auto;
+					}
+					&.--employment {
+						background: url(../img/hair/employment_bg.webp) no-repeat;
+						background-size: cover;
+					}
+					&.--faq {
+						background: url(../img/hair/faq_bg.webp) no-repeat;
+						background-size: cover;
 					}
 				}
-				& > p{
-					text-align: left;
+			}
+		}
+	}
+	.intro-ttl {
+		font-size: clamp((20em/13),(4600vw/1600),(46em/16));
+		font-weight: 600;
+		color: var.$navy;
+		margin-bottom: 0.75em;
+		position: relative;
+		z-index: 1;
+		.en {
+			position: absolute;
+			left: 0em;
+			top: -0.5em;
+			color: var.$hair;
+			font-family: var.$num-font;
+			font-weight: 400;
+			font-size: (11400vw/1920);
+			white-space: nowrap;
+			line-height: 1;
+			opacity: 0.2;
+			z-index: -1;
+			text-align: center;
+			letter-spacing: 0.054em;
+			span {
+				color: transparent;
+				-webkit-text-stroke: 1px var.$hair;
+				text-stroke: 1px var.$hair;
+				paint-order: stroke;
+			}
+			@include mixin.max-screen(var.$screen-md) {
+				font-size: (6000vw/375);
+			}
+		}
+		.bg {
+			background: var.$hair;
+			color: #FFF;
+			padding: 0 0.25em;
+		}
+	}
+
+	.curriculum-wrap{
+		margin-top: 3em;
+		display: flex;
+		justify-content: space-evenly;
+		gap: 2em;
+		text-align: center;
+		@include mixin.max-screen(var.$screen-lg) {
+			flex-direction: column;
+		}
+	}
+	.curriculum-area {
+		background: #FFF;
+		border: 2px solid var.$hair;
+		border-radius: 1em;
+		padding: clamp(1em, 6vw, 3em) clamp(1em, 4vw, 2em) clamp(1em, 4vw, 2em);
+		//width: percentage(640/1440);
+		position: relative;
+		flex: 1;
+		@include mixin.max-screen(var.$screen-lg) {
+			padding-top: 2.5em;
+		}
+		&__ttl {
+			color: var.$hair;
+			text-align: center;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			background: #FFF;
+			border: 2px solid var.$hair;
+			font-size: (20em/16);
+			font-weight: 600;
+			padding: 0 2em;
+			min-width: 170px;
+			border-radius: 50em;
+			@include mixin.max-screen(var.$screen-md) {
+				width: 90%;
+			}
+		}
+		&__read {
+			font-size: clamp((16em/13),(1800vw/1440),(18em/16));
+			font-weight: 600;
+			margin-bottom: 1em;
+			color: var.$text;
+			line-height: 1.6;
+			@include mixin.max-screen(var.$screen-lg) {
+			}
+			span {
+				position: relative;
+				display: inline-block;
+				&:before,
+				&:after {
+					content: "";
+					width: 1px;
+					height: (40em/18);
+					display: block;
+					background: #000;
+					transform-origin: center;
+					position: absolute;
+					top: 50%;
+					transform: translate(0,-50%);
+					@include mixin.max-screen(var.$screen-lg) {
+					}
+				}
+				&:before {
+					transform: rotate(-15deg) translate(0,-50%);
+					left: -1em;
+					@include mixin.max-screen(var.$screen-lg) {
+					}
+				}
+				&:after {
+					transform: rotate(15deg) translate(0,-50%);
+					right: -1em;
+					@include mixin.max-screen(var.$screen-lg) {
+					}
 				}
 			}
+		}
+		&__ul {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			gap: 1em;
+			&.--circle {
+				flex-direction: row;
+				gap: (8%/3);
+				@include mixin.max-screen(var.$screen-sm) {
+					flex-wrap: wrap;
+				}
+				li {
+					width: clamp((1em/13),(13300vw/1440),(133em/22));
+					height: clamp((1em/13),(13300vw/1440),(133em/22));
+					@include mixin.max-screen(var.$screen-lg) {
+						width: clamp((1em/13),(20000vw/1080),(200em/22));
+						height: clamp((1em/13),(20000vw/1080),(200em/22));
+					}
+					@include mixin.max-screen(var.$screen-sm) {
+						width: (18000vw/560);
+						height: (18000vw/560);
+						margin: 1% 0;
+					}
+					span {
+						font-size: (20em/22);
+						@include mixin.max-screen(var.$screen-lg) {
+							font-size: (24em/22);
+						}
+					}
+				}
+			}
+			li {
+				background: #71BBE8;
+				background: linear-gradient(90deg,rgba(113, 187, 232, 1) 1%, rgba(80, 187, 209, 1) 100%);
+				color: #FFF;
+				font-weight: 600;
+				padding: 0.75em;
+				border-radius: 50em;
+				line-height: 1.4;
+				font-size: clamp((14em/13),(2200vw/1440),(22em/16));
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				span {
+				}
+			}
+		}
+		&__txt {
+			font-size: clamp((14em/13),(2200vw/1440),(22em/16));
+			font-weight: 600;
+			line-height: 1.4;
+			margin-top: 1em;
+		}
+	}
+	.curriculum-txt {
+		margin-top: 2em;
+		color: #FFF;
+		text-align: center;
+		&__read {
+			font-size: clamp((24em/13),(4000vw/1200),(40em/16));
+			font-weight: 700;
+			span {
+				position: relative;
+				padding: 0 0.25em;
+				z-index: 1;
+				&:before {
+					content: "";
+					background: #FBC70F;
+					width: 100%;
+					height: (20em/40);
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					z-index: -1;
+				}
+			}
+		}
+		&__txt {
+			font-size: clamp((16em/13),(2200vw/1200),(22em/16));
 		}
 	}
 
@@ -523,6 +592,11 @@
 				}
 			}
 		}
+		&__txt {
+			font-size: (12em/16);
+			margin-top: 1em;
+			line-height: 1.6;
+		}
 		@include mixin.max-screen(var.$screen-sm) {
 			flex-wrap: wrap;
 			justify-content: center;
@@ -535,9 +609,10 @@
 	}
 	.insta-link{
 		text-align: center;
-		margin-top: 3em;
+		margin-bottom: 2em;
 		display: flex;
 		justify-content: space-evenly;
+		font-weight: 700;
 		a{
 			text-decoration: none;
 			padding-left: 2em;
@@ -560,12 +635,7 @@
 			}
 			&.insta {
 				&:before {
-					background-image: url("../img/illustration/insta-icon.svg");
-				}
-			}
-			&.twitter {
-				&:before {
-					background-image: url("../img/illustration/twitter-icon.svg");
+					background-image: url("../img/hair/insta-icon.svg");
 				}
 			}
 		}
@@ -574,99 +644,51 @@
 		}
 	}
 
-
-
-	/*----------------------------------------------------------------
-	イラストレーション科について
-	----------------------------------------------------------------*/
-	.about-list {
-		margin: 2em 0;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		li {
-			width: 32%;
-			border-radius: (1200vw/1920);
-			overflow: hidden;
-		}
+	.reason-ttl {
+		font-size: clamp((28em/13),(4600vw/1600),(46em/16));
+		font-weight: 600;
+		color: var.$hair;
+		margin-bottom: 0.75em;
+		text-align: center;
+		letter-spacing: 0.1em;
+		line-height: 1.4;
 	}
-
-	.feature-list {
+	.reason-list {
 		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
-		gap: 2%;
-		li {
-			width: 32%;
-			position: relative;
-			margin-top: (80em/16);
-			@include mixin.max-screen(var.$screen-md) {
-				margin-top: (50em/16);
-				width: auto;
-			}
-		}
-		.illustration-frame {
-			&__inner {
-				padding-left: 2em;
-				padding-right: 2em;
-			}
-		}
-		&__num {
-			font-weight: bold;
-			background: var.$illustration;
-			font-family: var.$teko-font;
-			border-radius: 50em;
-			font-size: (40em/16);
-			position: absolute !important;
-			color: #FFF;
-			top: 0;
-			left: 50%;
-			transform: translate(-50%,-50%);
-			width: (80em/40);
-			height: (80em/40);
-			padding-top: (25em/40);
-			line-height: 1;
-			text-align: center;
-			@include mixin.max-screen(var.$screen-md) {
-				font-size: (32em/16);
-			}
-		}
-		&__ttl {
-			color: var.$illustration;
-			text-align: center;
-			line-height: 1.4;
-			font-size: clamp((22em/13),(3200vw/1440),(32em/16));
-			font-weight: bold;
-			margin-bottom: 1.5em;
-		}
-		&__thumb {
-			margin-bottom: 1.5em;
-		}
-	}
-
-	.employment-list {
-		display: flex;
-		gap: 2%;
+		gap: 4%;
 		justify-content: center;
 		flex-wrap: wrap;
 		&__item {
-			width: 49%;
-			margin-top: 2%;
+			width: 48%;
+			margin-top: 6%;
 			position: relative;
 			@include mixin.max-screen(var.$screen-md) {
 				width: 100%;
-				margin-top: 1em;
+				margin-top: 4em;
 			}
 		}
 		&__thumb {
-			margin-bottom: 1em;
+			margin-bottom: (20em/16);
 		}
 		&__ttl {
-			font-size: (24em/16);
-			font-weight: 800;
+			font-size: clamp((18em/13),(2800vw/1440),(28em/16));
+			font-weight: 700;
 			line-height: 1.5;
-			margin-bottom: 1em;
-			color: var.$illustration;
+			margin-bottom: (20em/28);
+			color: var.$hair;
+			text-align: center;
+		}
+		&__num {
+			font-size: clamp((80em/13),(11400vw/1440),(114em/16));
+			font-family: var.$num-font;
+			position: absolute;
+			line-height: 1;
+			color: rgba(var.$hair ,.3);
+			top: -0.4em;
+			left: -0.2em;
+			@include mixin.max-screen(var.$screen-md) {
+				left: -0.1em;
+			}
 		}
 		&__ul {
 			display: flex;
@@ -689,6 +711,182 @@
 				}
 			}
 		}
+	}
+
+	.lesson-read {
+		font-size: clamp((18em/13),(3600vw/1440),(36em/16));
+		font-weight: 600;
+		margin-bottom: 1em;
+		line-height: 1.6;
+	}
+
+	.slider-list{
+		margin-top: 3em;
+		.slick-list{
+			overflow:visible;
+		}
+		.slick-slide{
+			padding: 0;
+		}
+	}
+
+
+
+	/*----------------------------------------------------------------
+	美容師科について
+	----------------------------------------------------------------*/
+	.about-list {
+		margin: 2em 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		li {
+			width: 32%;
+			border-radius: (1200vw/1920);
+			overflow: hidden;
+		}
+	}
+	.achieve-list {
+		margin-top: 2em;
+	}
+	.custom-list {
+		margin-top: 2em;
+		li {
+			border: 2px solid var.$hair;
+			overflow: hidden;
+			border-radius: 0.5em;
+			background: var.$hair;
+		}
+		&__thumb {
+			figcaption {
+				text-align: center;
+				color: #FFF;
+				font-weight: bold;
+				padding: 0.25em;
+				font-size: clamp(1.2rem,(2000vw/1440),(20em/16));
+			}
+		}
+		
+	}
+	.about-curriculum-img {
+		position: absolute;
+		bottom: 0%;
+		width: 30%;
+		@include mixin.max-screen(var.$screen-lg) {
+			width: 200px;
+		}
+		@include mixin.max-screen(var.$screen-md) {
+			width: 128px;
+		}
+		&.--left {
+			left: 0;
+		}
+		&.--right {
+			right: 0;
+		}
+	}
+	.about-curriculum {
+		color: var.$text;
+		max-width: 70%;
+		@include mixin.max-screen(var.$screen-lg) {
+			max-width: none;
+			width: calc(100% - 200px);
+		}
+		@include mixin.max-screen(var.$screen-md) {
+			width: calc(100% - 100px);
+		}
+		&.--left {
+			margin-left: auto;
+		}
+		&.--right {
+			margin-right: auto;
+		}
+		&__ttl {
+			background: var.$hair;
+			text-align: center;
+			font-weight: bold;
+			font-size: clamp(1.4rem,(2000vw/1440),(20em/16));
+			border-radius: 50em;
+			padding: 0.5em;
+			line-height: 1.4;
+			color: #FFF;
+			margin-bottom: 0.5em;
+			&:not(:first-child) {
+				margin-top: 1em;
+			}
+		}
+		&__txt {
+			line-height: 1.2;
+			font-weight: bold;
+			font-size: clamp(1.4rem,(1800vw/1440),(18em/16));
+		}
+	}
+
+	.sec-hair-nintei {
+		background-color: var.$hair;
+		color: #fff;
+		padding: 3em 0;
+		font-size: 0.9em;
+		.txtWrap {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			gap: 3em;
+			border-bottom: 1px solid;
+			padding-bottom: 1.5em;
+			margin-bottom: 2em;
+		}
+		@media screen and (max-width: 860px) {
+			.txtWrap {
+				-ms-flex-wrap: wrap;
+						flex-wrap: wrap;
+				gap: 1em;
+			}
+		}
+		.txtWrap .ttl {
+			white-space: nowrap;
+			font-size: 1.75em;
+			font-weight: bold;
+		}
+		@media screen and (max-width: 860px) {
+			.txtWrap .ttl {
+				line-height: 1.5;
+			}
+		}
+		.txtWrap .ttl .small {
+			display: block;
+			font-size: 0.7em;
+		}
+		.txtWrap .ttl .txt {
+			color: #fff200;
+		}
+		.flexWrap .ttl {
+			text-align: center;
+			padding: 0.5em;
+			margin-bottom: 0.5em;
+			border-radius: 100px;
+			font-weight: bold;
+			background-color: #FFF;
+			color: var.$hair;
+		}
+		.flexWrap .txt {
+			padding: 0 1em;
+		}
+		.flexWrap > *:last-child {
+			padding: 1em;
+			font-size: 0.8em;
+			border: 1px dashed;
+		}
+		@media screen and (max-width: 860px) {
+			.flexWrap > * {
+				width: 100%;
+			}
+		}
+	}
+
+	.reduction-img {
+		max-width: 1000px;
+		margin: 0 auto;
 	}
 
 	.schedule-area {
@@ -716,7 +914,7 @@
 				top: -1em;
 				bottom: -1px;
 				left: (55em/16);
-				background: var.$illustration;
+				background: var.$hair;
 				width: (10em/16);
 				z-index: -1;
 				@include mixin.max-screen(var.$screen-md) {
@@ -736,9 +934,10 @@
 			}
 		}
 		&__time {
-			font-family: var.$teko-font;
+			font-family: var.$num-font;
+			letter-spacing: 0.05em;
 			font-weight: bold;
-			background: var.$illustration;
+			background: var.$hair;
 			border-radius: 50em;
 			font-size: (32em/16);
 			color: #FFF;
@@ -786,237 +985,166 @@
 	}
 
 
+
 	/*----------------------------------------------------------------
 	カリキュラム
 	----------------------------------------------------------------*/
-	.soft-area {
-		&:not(:first-child) {
-			margin-top: 4%;
+	.wide-area {
+		+ .wide-area {
+			margin-top: 4em;
 		}
 		&__ttl {
-			background: var.$text;
+			background: #71BBE8;
+			background: linear-gradient(90deg, rgb(113, 187, 232) 1%, rgb(80, 187, 209) 100%);
+			color: #FFF;
+			font-size: clamp((20em/13),(2800vw/1440),(28em/16));
+			text-align: center;
+			padding: 0.75em;
 			font-weight: bold;
-			font-size: (22em/16);
-			text-align: center;
-			padding: 0.25em;
-			margin-bottom: 1em;
-			color: #fff;
-			border-radius: 50em;
-		}
-		&__ul {
-			display: flex;
-			justify-content: center;
-			flex-wrap: wrap;
-			gap: 2%;
-			@include mixin.max-screen(var.$screen-lg) {
-				justify-content: flex-start;
-			}
-			li {
-				display: flex;
-				align-items: center;
-				white-space: nowrap;
-				@include mixin.max-screen(var.$screen-lg) {
-					width: 48%;
-					margin: 2% 0;
-				}
-				@include mixin.max-screen(var.$screen-sm) {
-					width: 100%;
-				}
-				img {
-					margin-right: 4%;
-					width: (80em/16);
-				}
-				span {
-					flex: 1;
-					font-size: (16em/16);
-					font-weight: bold;
-					line-height: 1.6;
-				}
-			}
+			margin: 0 0 1.5em;
+			line-height: 1.4;
 		}
 	}
-
-	.learning-area {
-		margin-top: 5%;
+	.curriculum-cont {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		gap: 3em;
+		text-align: center;
+		> * {
+			flex: 1;
+		}
+		@include mixin.max-screen(var.$screen-lg) {
+			gap: 1em;
+			flex-direction: column;
+		}
+		&__box {
+			text-align: left;
+		}
 		&__ttl {
-			font-size: (32em/16);
-			color: var.$illustration;
-			font-weight: 800;
-			margin-bottom: 0.75em;
-			text-align: center;
-			line-height: 1.6;
-			span {
-				display: inline-block;
-				padding: 0.25em 2em;
-				background: var.$illustration;
-				color: #FFF;
-				font-size: (22em/32);
-				border-radius: 50em;
-				margin-bottom: 0.5em;
-				vertical-align: bottom;
-			}
-		}
-		&__dl{
-			display: flex;
-			flex-wrap: wrap;
-			align-items: flex-start;
-			font-size: (18em/16);
-			@include mixin.max-screen(var.$screen-md) {
-				flex-direction: column;
-			}
-			dt {
-				margin-right: 1em;
-				width: 15em;
-				text-align: center;
-				font-weight: bold;
-				border-radius: 50em;
-				padding: 0.25em 0em;
-				background: var.$text;
-				color: #FFF;
-				@include mixin.min-screen(var.$screen-md + 1) {
-					&:not(:first-of-type) {
-						margin-top: 2%;
-					}
-				}
-				@include mixin.max-screen(var.$screen-md) {
-					width: 100%;
-					margin-bottom: 0.5em;
-				}
-			}
-			dd {
-				width: calc(100% - 16em);
-				@include mixin.min-screen(var.$screen-md + 1) {
-					&:not(:first-of-type) {
-						margin-top: 2%;
-					}
-				}
-				@include mixin.max-screen(var.$screen-md) {
-					width: 100%;
-					+ dt {
-						margin-top: 8%;
-					}
-				}
-			}
-		}
-		ul {
-			font-size: (16em/18);
-			&.inline {
-				li {
-					display: inline-block;
-					margin-right: 1em;
-				}
-			}
-			li {
-				padding-left: 1.5em;
-				position: relative;
-				&:before {
-					content: "";
-					width: 1em;
-					height: 1em;
-					position: absolute;
-					left: 0;
-					top: 0%;
-					margin-top: 0.5em;
-					background: url(../img/illustration/icon-ster.svg) no-repeat;
-					background-position: center;
-					background-size: contain;
-				}
-			}
-		}
-	}
-	
-	
-
-	/*----------------------------------------------------------------
-	コース
-	----------------------------------------------------------------*/
-	.sec-course-intro{
-		.thumb{
-			margin: 0 auto 2em;
-			text-align: center;
-			max-width: 1200px;
-			width: 100%;
-		}
-		.big-text{
-			font-size: 120%;
+			font-size: clamp((18em/13),(2800vw/1440),(28em/16));
 			font-weight: bold;
 			margin-bottom: 0.5em;
+			color: var.$hair;
 		}
+		&__txt {
+			font-size: clamp((13em/13),(1600vw/1440),(16em/16));
+		}
+	}
+	.lesson-list {
+		margin-top: 2em;
+		li {
+			border: 2px solid var.$hair;
+			border-radius: 0.5em;
+		}
+		&__ttl {
+			background: var.$hair;
+			text-align: center;
+			font-size: clamp((13em/13),(1800vw/1440),(18em/16));
+			padding: 0.25em;
+			font-weight: 700;
+			color: #FFF;
+			@include mixin.max-screen(var.$screen-lg) {
+				font-size: (18em/13);
+			}
+		}
+		&__txt {
+			padding: 1em;
+			font-size: clamp((13em/13),(1400vw/1440),(14em/16));
+			@include mixin.max-screen(var.$screen-lg) {
+				font-size: (14em/13);
+			}
+		}
+	}
+	.cg-icon {
+		text-align: center;
+		max-width: 200px;
+		margin: 1.5em auto;
+		width: 60%;
 	}
 
-	.work-list{
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(14em, 1fr));
-		gap: 1.5em;
-		margin-top: 3em;
-		li{
-			p{
-				line-height: 1.4;
-				margin-top: 0.8em;
-				text-align: center;
-				font-size: 110%;
-			}
-		}
-		@include mixin.max-screen(var.$screen-sm) {
-			grid-template-columns: repeat(auto-fill, minmax(9.5em, 1fr));
-		}
-	}
-
-	.table-cont {
-		overflow-y: auto;
-	}
-	.table {
-		width: 100%;
-		min-width: 700px;
-		border-radius: 0.5em;
-		line-height: 1.6;
-		font-size: clamp((14em/13),(1800vw/1440),(18em/16));
-		tr {
-			th,td {
-				border: 2px solid var.$text;
-				padding: 1em 1.5em;
-				width: 25%;
-			}
-			th {
-				background: var.$illustration;
-				color: #FFF;
-			}
-			td {
-				&:first-child {
-					font-weight: bold;
-					text-align: center;
-					background: rgba(var.$illustration, .1);
-				}
-			}
-		}
-	}
 
 
 	/*----------------------------------------------------------------
 	就職・進路
 	----------------------------------------------------------------*/
-	.interview-thumb {}
-	.interview-ttl {
-		text-align: center;
-		background: var.$illustration;
-		line-height: 1.6;
-		color: #FFF;
-		padding: 0.5em;
-		margin-bottom: 1em;
-		border-radius: 0.5em;
-		font-weight: (14em/16);
-		.lg {
-			font-size: (24em/14);
-			font-weight: 800;
+	.employment-intro {
+		&__ttl {
+			max-width: 800px;
+			margin: 0 auto 2em;
+			width: 94%;
 		}
-		.md {
-			font-size: (20em/14);
+		&__point {
+			display: flex;
+			justify-content: center;
+			margin: 2em 0;
+			gap: 2em;
+			li {
+				max-width: 300px;
+				width: (30000vw/1440);
+				min-width: 150px;
+			}
 		}
 	}
-	.interview-txt {
-		span {
-			color: var.$illustration;
-			font-weight: bold;
+	.place-cont {
+		background: #FFF;
+		border-radius: 0.5em;
+		color: var.$text;
+		padding: clamp((20em/13),(4000vw/1440),(40em/16));
+		&__ul {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.25em 1em;
+			li {
+				&:before {
+					content: "";
+					width: (10em/16);
+					height: (10em/16);
+					border-radius: 50em;
+					display: inline-block;
+					vertical-align: middle;
+					margin-right: 0.25em;
+					background: var.$hair;
+				}
+			}
+		}
+		&__other {
+			text-align: right;
+			margin-top: 0.5em;
+		}
+	}
+	.interview-list {
+		color: var.$text;
+		margin-top: 2em;
+		li {
+			background: #FFF;
+			border-radius: 0.5em;
+			padding: clamp((15em/13),(4000vw/1440),(20em/16));
+		}
+		&__thumb {}
+		&__ttl {
+			text-align: center;
+			background: var.$hair;
+			background: linear-gradient(90deg, rgb(113, 187, 232) 1%, rgb(80, 187, 209) 100%);
+			line-height: 1.6;
+			color: #FFF;
+			padding: 0.5em;
+			margin-bottom: 1em;
+			border-radius: 0.5em;
+			font-weight: (14em/16);
+			.lg {
+				font-size: (20em/14);
+				font-weight: 800;
+			}
+			.md {
+				font-size: (18em/14);
+			}
+		}
+		&__txt {
+			span {
+				color: var.$illustration;
+				font-weight: bold;
+			}
 		}
 	}
 
@@ -1025,104 +1153,69 @@
 	FAQ
 	----------------------------------------------------------------*/
 	.faq-list {
-		background: var.$text;
-		border-radius: 0.5em;
-		position: relative;
 		transition: .3s;
 		max-width: 1200px;
 		width: 80%;
 		margin: 2em auto 0;
+		background: #FFF;
+		border-radius: 1em;
+		border: 3px solid #CCC;
 		@include mixin.max-screen(var.$screen-sm) {
 				width: auto;
 		}
-		&__inner {
-			background-color: #FFF;
-			background-image: url("../img/illustration/icon-ster2.svg") ,url("../img/illustration/icon-ster2.svg") ,url("../img/illustration/icon-ster2.svg") ,url("../img/illustration/icon-ster2.svg");
-			background-size: (18em/16) auto;
-			background-position: top 1em left 1em , top 1em right 1em , bottom 1em left 1em , bottom 1em right 1em;
-			background-repeat: no-repeat;
-			border: 2px solid var.$text;
-			border-radius: 0.5em;
-			position: relative;
-			z-index: 0;
-			height: 100%;
-			top: -6px;
-			left: -6px;
-			@include mixin.max-screen(var.$screen-xs) {
-				background-size: (14em/16) auto;
-				background-position: top 0.5em left 0.5em , top 0.5em right 0.5em , bottom 0.5em left 0.5em , bottom 0.5em right 0.5em;
+		&:hover,
+		&[open] {
+			border-color: var.$hair;
+			.faq-list__head {
+				color: var.$hair;
 			}
 		}
-		// &[open] {
-		// 	.faq-list__head {
-		// 		&:after {
-		// 			background-image: url(../img/common/minus.svg);
-		// 		}
-		// 	}
-		// }
 		&__head {
-			font-size: (20em/16);
-			padding: (30em/20) (50em/20) (30em/20) (105em/20);
-			width: auto;
-			position: relative;
-			font-weight: bold;
-			cursor: pointer;
-			line-height: 1.6;
-			@include mixin.max-screen(var.$screen-xs) {
-				padding: (30em/20) (50em/20) (30em/20) (65em/20);
-				font-size: (14em/12);
-			}
-			&:before {
-				content: "Q";
-				font-family: var.$teko-font;
+				font-size: (20em/16);
+				padding: (30em/20) (50em/20) (30em/20) (100em/20);
+				width: auto;
+				position: relative;
 				font-weight: bold;
-				font-size: (40em/20);
-				position: absolute;
-				left: 1.5em;
-				@include mixin.min-screen(var.$screen-xs + 1) {
-					top: 50%;
-					transform: translate(0,-50%);
-				}
+				cursor: pointer;
+				color: var.$text;
+				transition: .3s;
 				@include mixin.max-screen(var.$screen-xs) {
-					top: 0.4em;
-					left: 0.75em;
+						padding: (30em/20) (50em/20) (30em/20) (60em/20);
+						font-size: (14em/12);
 				}
-			}
-			// &:after {
-			// 	content: "";
-			// 	width: (20em/20);
-			// 	height: (20em/20);
-			// 	position: absolute;
-			// 	right: (20em/20);
-			// 	transform: translate(0,-50%);
-			// 	top: 50%;
-			// 	background: url(../img/common/plus.svg) no-repeat;
-			// 	background-position: center;
-			// }
+				&:before {
+						content: "Q";
+						font-weight: bold;
+						font-size: (30em/20);
+						position: absolute;
+						top: 0.6em;
+						left: 1.5em;
+						@include mixin.max-screen(var.$screen-xs) {
+								left: 0.75em;
+						}
+				}
+				&:after {
+						content: "";
+						width: (20em/20);
+						height: (20em/20);
+						position: absolute;
+						right: (20em/20);
+						transform: translate(0,-50%);
+						top: 50%;
+						background: url(../img/common/plus.svg) no-repeat;
+						background-position: center;
+				}
 		}
 		&__body {
 				font-size: (18em/16);
-				padding: (0/18) (50em/18) (30em/18) (105em/18);
+				padding: (0/18) (50em/18) (30em/18) (100em/18);
 				margin-top: 0;
 				position: relative;
 				font-weight: 500;
 				white-space: pre-wrap;
-				color: var.$illustration;
 				@include mixin.max-screen(var.$screen-xs) {
 						padding: 0 (25em/18) (20em/18);
 						font-size: (13em/12);
-				}
-				&:before {
-					content: "A";
-					font-family: var.$teko-font;
-					font-weight: bold;
-					font-size: (40em/20);
-					position: absolute;
-					top: -0.3em;
-					left: 1.7em;
-					@include mixin.max-screen(var.$screen-xs) {
-							left: 0.75em;
-					}
 				}
 				a {
 						text-decoration: underline;
@@ -1133,6 +1226,7 @@
 				}
 		}
 	}
+
 
 
 
