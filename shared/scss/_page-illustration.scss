@@ -257,6 +257,43 @@
 		}
 		&__txt {
 		}
+		&.--btns {
+			padding-bottom: 0;
+			.btnArea{
+				text-align: center;
+				display: flex;
+				justify-content: center;
+				gap: 1em;
+				flex-wrap: wrap;
+				padding: 0 1em;
+				@include mixin.max-screen(var.$screen-md) {
+					gap: 1em 2%;
+					justify-content: flex-start;
+				}
+				.basicBtn {
+					min-width: 0;
+					margin: 0;
+				}
+			}
+			@include mixin.max-screen(var.$screen-md) {
+				font-size: (12em/13);
+				padding-top: 1.5em;
+				.btnArea {
+					.basicBtn {
+						width: 49%;
+						min-width: 0;
+						padding: 1em;
+						text-align: left;
+						&.-wide {
+							width: 100%;
+						}
+						&:after {
+							right: 0.4em;
+						}
+					}
+				}
+			}
+		}
 		&.--intro {
 			padding-bottom: 0;
 			.slider-list{

@@ -233,6 +233,40 @@
 		}
 	}
 
+	.sec-btns {
+		padding-bottom: 0;
+		.btnArea{
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			gap: 1em;
+			flex-wrap: wrap;
+			padding: 0 1em;
+			@include mixin.max-screen(var.$screen-md) {
+				gap: 1em 2%;
+				justify-content: flex-start;
+			}
+		}
+		@include mixin.max-screen(var.$screen-md) {
+			font-size: (12em/13);
+			padding-top: 1.5em;
+			.btnArea {
+				.basicBtn {
+					width: 49%;
+					min-width: 0;
+					display: inline-block;
+					padding: 1em;
+					&.-wide {
+						width: 100%;
+					}
+					&:after {
+						right: 0.4em;
+					}
+				}
+			}
+		}
+	}
+
 	.sec-intro{
 		.ttl{
 			font-family: var.$serif-font2;
@@ -462,6 +496,9 @@
         flex: 1;
 				padding: clamp(1em,2vw,2em);
 				position: relative;
+				display: flex;
+				flex-direction: column;
+				gap: 1em;
 				&:before{
 					content: "";
 					background: #FFF;
@@ -510,7 +547,7 @@
 					display: block;
 					text-align: center;
 					width: 96%;
-					margin: 0 2% -0.6em;
+					margin: 0 2% -1.2em;
 					z-index: 2;
 					&:before{
 						position: absolute;
@@ -538,7 +575,7 @@
 					}
 				}
 				.thumb{
-					margin-bottom: 1.2em;
+					//margin-bottom: 1.2em;
 				}
 				.pink{
 					color: var.$beauty;
@@ -547,10 +584,10 @@
 					font-family: var.$serif-font2;
 					font-size: 120%;
 					font-weight: bold;
-					margin-bottom: 0.5em;
+					margin-bottom: -0.4em;
 				}
 				.job-wrap{
-					margin-top: 1em;
+					//margin-top: 1em;
 					background: rgba(var.$beauty2 ,0.1);
 					padding: clamp(1em,5vw,1.5em);
 					border-radius: 0.5em;
@@ -584,6 +621,9 @@
 							}
 						}
 					}
+				}
+				.btnArea {
+					margin-top: auto;
 				}
       }
 			@include mixin.max-screen(var.$screen-lg) {

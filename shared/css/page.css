@@ -1855,6 +1855,52 @@
   line-height: 1;
   opacity: 0.6;
 }
+.-beauty .sec-btns {
+  padding-bottom: 0;
+}
+.-beauty .sec-btns .btnArea {
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1em;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  padding: 0 1em;
+}
+@media screen and (max-width: 767px) {
+  .-beauty .sec-btns .btnArea {
+    gap: 1em 2%;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+@media screen and (max-width: 767px) {
+  .-beauty .sec-btns {
+    font-size: 0.9230769231em;
+    padding-top: 1.5em;
+  }
+  .-beauty .sec-btns .btnArea .basicBtn {
+    width: 49%;
+    min-width: 0;
+    display: inline-block;
+    padding: 1em;
+  }
+  .-beauty .sec-btns .btnArea .basicBtn.-wide {
+    width: 100%;
+  }
+  .-beauty .sec-btns .btnArea .basicBtn:after {
+    right: 0.4em;
+  }
+}
 .-beauty .sec-intro .ttl {
   font-family: "BIZ UDMincho", serif;
   color: #FFF;
@@ -2150,6 +2196,16 @@
           flex: 1;
   padding: clamp(1em, 2vw, 2em);
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1em;
 }
 .-beauty .sec-course .course-list__item:before {
   content: "";
@@ -2200,7 +2256,7 @@
   display: block;
   text-align: center;
   width: 96%;
-  margin: 0 2% -0.6em;
+  margin: 0 2% -1.2em;
   z-index: 2;
 }
 .-beauty .sec-course .course-list__item > .ttl:before {
@@ -2227,9 +2283,6 @@
   border-color: transparent #fff transparent transparent;
   border-style: solid;
 }
-.-beauty .sec-course .course-list__item .thumb {
-  margin-bottom: 1.2em;
-}
 .-beauty .sec-course .course-list__item .pink {
   color: #f59ac9;
   text-align: center;
@@ -2237,10 +2290,9 @@
   font-family: "BIZ UDMincho", serif;
   font-size: 120%;
   font-weight: bold;
-  margin-bottom: 0.5em;
+  margin-bottom: -0.4em;
 }
 .-beauty .sec-course .course-list__item .job-wrap {
-  margin-top: 1em;
   background: rgba(239, 101, 137, 0.1);
   padding: clamp(1em, 5vw, 1.5em);
   border-radius: 0.5em;
@@ -2281,6 +2333,9 @@
   background: url(../img/beauty/icon-kirakira.svg) no-repeat;
   background-position: center;
   background-size: contain;
+}
+.-beauty .sec-course .course-list__item .btnArea {
+  margin-top: auto;
 }
 @media screen and (max-width: 1080px) {
   .-beauty .sec-course .course-list {
@@ -3926,6 +3981,64 @@
 .-beauty .sec-faq .faq-list__body a:hover {
   text-decoration: none;
 }
+.-beauty .sec-job .support-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.-beauty .sec-job .support-list li {
+  width: 32%;
+  margin-top: 2%;
+  padding: clamp(1.875em, 2.6041666667vw, 2.1875em);
+  position: relative;
+}
+.-beauty .sec-job .support-list li:before {
+  content: "";
+  background: #FFF;
+  width: calc(100% - 3em);
+  height: 100%;
+  border-radius: 1em;
+  position: absolute;
+  left: 1.5em;
+  top: 0;
+}
+.-beauty .sec-job .support-list li:after {
+  content: "";
+  background: #FFF;
+  width: 100%;
+  height: calc(100% - 3em);
+  border-radius: 1em;
+  position: absolute;
+  left: 0;
+  top: 1.5em;
+}
+.-beauty .sec-job .support-list li > * {
+  position: relative;
+  z-index: 1;
+}
+@media screen and (max-width: 767px) {
+  .-beauty .sec-job .support-list li {
+    width: 100%;
+    margin-top: 1em;
+  }
+}
+.-beauty .sec-job .support-list__ttl {
+  font-size: 1.25em;
+  font-weight: bold;
+  text-align: center;
+  font-family: "BIZ UDMincho", serif;
+  color: #f59ac9;
+  line-height: 1.5;
+}
 
 /*==================================================================================================
 	イラストレーション科
@@ -4205,6 +4318,56 @@
 }
 .-illustration .sec__read {
   font-size: clamp(1.1538461538em, 1.3888888889vw, 1.25em);
+}
+.-illustration .sec.--btns {
+  padding-bottom: 0;
+}
+.-illustration .sec.--btns .btnArea {
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1em;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  padding: 0 1em;
+}
+@media screen and (max-width: 767px) {
+  .-illustration .sec.--btns .btnArea {
+    gap: 1em 2%;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+.-illustration .sec.--btns .btnArea .basicBtn {
+  min-width: 0;
+  margin: 0;
+}
+@media screen and (max-width: 767px) {
+  .-illustration .sec.--btns {
+    font-size: 0.9230769231em;
+    padding-top: 1.5em;
+  }
+  .-illustration .sec.--btns .btnArea .basicBtn {
+    width: 49%;
+    min-width: 0;
+    padding: 1em;
+    text-align: left;
+  }
+  .-illustration .sec.--btns .btnArea .basicBtn.-wide {
+    width: 100%;
+  }
+  .-illustration .sec.--btns .btnArea .basicBtn:after {
+    right: 0.4em;
+  }
 }
 .-illustration .sec.--intro {
   padding-bottom: 0;
@@ -6119,6 +6282,68 @@
   background: url(../img/illustration/icon-ster.svg) no-repeat;
   background-position: center;
   background-size: contain;
+}
+.-hair .reason-circle {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.5em 2.6666666667%;
+}
+@media screen and (max-width: 560px) {
+  .-hair .reason-circle {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+}
+.-hair .reason-circle li {
+  text-align: center;
+  background: #71BBE8;
+  background: -webkit-gradient(linear, left top, right top, color-stop(1%, rgb(113, 187, 232)), to(rgb(80, 187, 209)));
+  background: -webkit-linear-gradient(left, rgb(113, 187, 232) 1%, rgb(80, 187, 209) 100%);
+  background: linear-gradient(90deg, rgb(113, 187, 232) 1%, rgb(80, 187, 209) 100%);
+  color: #FFF;
+  font-weight: 600;
+  border-radius: 50em;
+  line-height: 1.6;
+  font-size: clamp(1.6rem, 1.6666666667vw, 1.5em);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: clamp(100px, 15.2777777778vw, 9.1666666667em);
+  height: clamp(100px, 15.2777777778vw, 9.1666666667em);
+}
+@media screen and (max-width: 1080px) {
+  .-hair .reason-circle li {
+    font-size: clamp(1.4rem, 2.2222222222vw, 1.5em);
+    width: clamp(100px, 22.2222222222vw, 12em);
+    height: clamp(100px, 22.2222222222vw, 12em);
+  }
+}
+@media screen and (max-width: 560px) {
+  .-hair .reason-circle li {
+    height: auto;
+    width: 100%;
+    padding: 0.5em 0;
+    font-size: 1.6rem;
+  }
+  .-hair .reason-circle li br {
+    display: none;
+  }
 }
 .-hair .lesson-read {
   font-size: clamp(1.3846153846em, 2.5vw, 2.25em);

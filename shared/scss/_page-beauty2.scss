@@ -1039,6 +1039,56 @@
 			}
 	  }
 	}
+	.sec-job {
+		.support-list {
+			display: flex;
+			gap: 2%;
+			justify-content: center;
+			flex-wrap: wrap;
+			li {
+				width: 32%;
+				margin-top: 2%;
+				padding: clamp((30em/16),(5000vw/1920),(35em/16));
+				position: relative;
+				&:before{
+					content: "";
+					background: #FFF;
+					width: calc(100% - 3em);
+					height: 100%;
+					border-radius: 1em;
+					position: absolute;
+					left: 1.5em;
+					top: 0;
+				}
+				&:after{
+					content: "";
+					background: #FFF;
+					width: 100%;
+					height: calc(100% - 3em);
+					border-radius: 1em;
+					position: absolute;
+					left: 0;
+					top: 1.5em;
+				}
+				& > *{
+					position: relative;
+					z-index: 1;
+				}
+				@include mixin.max-screen(var.$screen-md) {
+					width: 100%;
+					margin-top: 1em;
+				}
+			}
+			&__ttl {
+				font-size: (20em/16);
+				font-weight: bold;
+				text-align: center;
+				font-family: "BIZ UDMincho", serif;
+				color: var.$beauty;
+				line-height: 1.5;
+			}
+		}
+	}
 }
 
 

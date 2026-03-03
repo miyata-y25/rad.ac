@@ -712,6 +712,54 @@
 			}
 		}
 	}
+	.reason-circle {
+		display: flex;
+		justify-content: center;
+		gap: 0.5em (8%/3);
+		@include mixin.max-screen(var.$screen-sm) {
+			flex-wrap: wrap;
+		}
+		li {
+			text-align: center;
+			background: #71BBE8;
+			background: linear-gradient(90deg,rgba(113, 187, 232, 1) 1%, rgba(80, 187, 209, 1) 100%);
+			color: #FFF;
+			font-weight: 600;
+			border-radius: 50em;
+			line-height: 1.6;
+			font-size: clamp(1.6rem,(2400vw/1440),(24em/16));
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: clamp(100px,(22000vw/1440),(220em/24));
+			height: clamp(100px,(22000vw/1440),(220em/24));
+			@include mixin.max-screen(var.$screen-lg) {
+				font-size: clamp(1.4rem,(2400vw/1080),(24em/16));
+				width: clamp(100px,(24000vw/1080),(240em/20));
+				height: clamp(100px,(24000vw/1080),(240em/20));
+			}
+			@include mixin.max-screen(var.$screen-sm) {
+				height: auto;
+				width: 100%;
+				padding: 0.5em 0;
+				font-size: 1.6rem;
+				br {
+					display: none;
+				}
+			}
+			// @include mixin.max-screen(var.$screen-sm) {
+			// 	width: (18000vw/560);
+			// 	height: (18000vw/560);
+			// 	margin: 1% 0;
+			// }
+			// span {
+			// 	font-size: (20em/22);
+			// 	@include mixin.max-screen(var.$screen-lg) {
+			// 		font-size: (24em/22);
+			// 	}
+			// }
+		}
+	}
 
 	.lesson-read {
 		font-size: clamp((18em/13),(3600vw/1440),(36em/16));
